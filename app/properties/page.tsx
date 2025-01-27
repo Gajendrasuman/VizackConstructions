@@ -1,41 +1,146 @@
+import Hero from "../components/Hero"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Home, Building, Factory } from "lucide-react"
+import { Building, Home, Factory } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+
+const propertyTypes = [
+  {
+    icon: Home,
+    title: "Residential Properties",
+    description: "Find your perfect home from our selection of apartments, villas, and independent houses.",
+    features: ["Apartments", "Villas", "Independent houses", "Penthouses", "Studio apartments"],
+  },
+  {
+    icon: Building,
+    title: "Commercial Properties",
+    description: "Premium commercial spaces for your business needs.",
+    features: ["Office spaces", "Retail shops", "Warehouses", "Shopping complexes", "Restaurant spaces"],
+  },
+  {
+    icon: Factory,
+    title: "Industrial Properties",
+    description: "Suitable industrial spaces and land for your manufacturing needs.",
+    features: ["Factories", "Manufacturing units", "Industrial land", "Storage facilities", "Industrial sheds"],
+  },
+]
+
+const benefits = [
+  {
+    title: "Verified Listings",
+    description: "All properties are thoroughly vetted for authenticity and quality.",
+  },
+  {
+    title: "Expert Guidance",
+    description: "Our team helps you find the perfect property based on your requirements and budget.",
+  },
+  {
+    title: "Flexible Options",
+    description: "From short-term rentals to permanent purchases, we offer flexible solutions.",
+  },
+  {
+    title: "Complete Documentation",
+    description: "We handle all the paperwork and legal documentation for a hassle-free experience.",
+  },
+]
 
 export default function Properties() {
-  const propertyTypes = [
-    { icon: Home, title: "Residential Properties", description: "Apartments, villas, and independent houses" },
-    { icon: Building, title: "Commercial Properties", description: "Office spaces, retail shops, and warehouses" },
-    { icon: Factory, title: "Industrial Properties", description: "Factories and land for industrial use" },
-  ]
-
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8 text-center">Property Rental and Sales</h1>
-      <p className="text-xl mb-8 text-center">Explore our range of properties for rent or purchase</p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        {propertyTypes.map((type, index) => (
-          <Card key={index}>
-            <CardHeader>
-              <type.icon className="w-12 h-12 mb-4 text-primary" />
-              <CardTitle>{type.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <CardDescription>{type.description}</CardDescription>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-      <div className="text-center">
-        <h2 className="text-2xl font-bold mb-4">Why Choose Us for Property Services?</h2>
-        <ul className="list-disc list-inside mb-8 text-left max-w-2xl mx-auto">
-          <li>Verified Listings: All properties are thoroughly vetted for authenticity and quality.</li>
-          <li>Expert Guidance: Our team helps you find the perfect property based on your requirements and budget.</li>
-          <li>Flexible Options: From short-term rentals to permanent purchases, we offer flexible solutions.</li>
-        </ul>
-        <p className="mb-4">Ready to find your dream property? Get in touch with our property experts today.</p>
-        <p>Phone: [Your Contact Number]</p>
-        <p>Email: [Your Email Address]</p>
-      </div>
+    <div>
+      <Hero
+        title="Property Rental and Sales"
+        subtitle="Explore our range of residential, commercial, and industrial properties"
+      />
+
+      {/* Property Types */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-16">
+            {propertyTypes.map((type, index) => (
+              <div key={index} className="grid md:grid-cols-2 gap-8 items-start">
+                <Card>
+                  <CardHeader>
+                    <type.icon className="w-12 h-12 mb-4 text-secondary" />
+                    <CardTitle>{type.title}</CardTitle>
+                    <CardDescription>{type.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      {type.features.map((feature, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <span className="text-secondary">•</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Available Options</CardTitle>
+                    <CardDescription>Choose from our selection of properties</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <p className="font-semibold">For Rent</p>
+                        <p className="text-muted-foreground">Short & long term</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold">For Sale</p>
+                        <p className="text-muted-foreground">Buy your dream property</p>
+                      </div>
+                    </div>
+                    <Button asChild className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90">
+                      <Link href="/contact">Enquire Now</Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-24 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">Why Choose Us for Property Services?</h2>
+            <p className="text-muted-foreground">We make property hunting and transactions smooth and hassle-free</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {benefits.map((benefit, index) => (
+              <Card key={index}>
+                <CardHeader>
+                  <CardTitle>{benefit.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>{benefit.description}</CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-secondary text-secondary-foreground">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Find Your Perfect Property?</h2>
+            <p className="mb-8">Browse our listings or get in touch with our property experts today</p>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="bg-secondary-foreground text-secondary hover:bg-secondary-foreground/90"
+            >
+              <Link href="/contact">Contact Our Experts</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

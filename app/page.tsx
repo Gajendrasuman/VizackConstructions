@@ -89,7 +89,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden hero-pattern">
+      <section className="bg-yellow relative py-24 overflow-hidden hero-pattern">
         <div className="container mx-auto px-4">
           <div className=" max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">

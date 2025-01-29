@@ -91,14 +91,14 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden hero-pattern">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className=" max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-              Building Dreams with <span className="text-secondary">Precision</span>
+              Welcome to  <span className="text-secondary"> ViZack </span> Enterprises and Construction
             </h1>
             <p className="text-xl mb-8 text-muted-foreground">
-              Your trusted partner for comprehensive construction services, from planning to completion
+              Your Trusted Partner for Comprehensive Construction Services
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="mb-16 flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
                 <Link href="/contact">Get Started</Link>
               </Button>
@@ -106,6 +106,9 @@ export default function Home() {
                 <Link href="/services">Our Services</Link>
               </Button>
             </div>
+            <p className="text-xl -mb-10 mt- text-muted-foreground">
+              We are a full-service construction company dedicated to transforming your vision into reality.Whether you need a small renovation, a large-scale commercial project, or anything in between, we provide end-to-end solutions for all your construction needs, including both interior and exterior services.
+            </p>
           </div>
         </div>
       </section>

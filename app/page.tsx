@@ -89,13 +89,16 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-yellow relative py-24 overflow-hidden hero-pattern">
+      <section className="bg-white relative py-24 overflow-hidden hero-pattern">
         <div className="container mx-auto px-4">
           <div className=" max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-              Welcome to  <span className="text-secondary"> ViZack </span> Enterprises and Construction
+            <h1 className="text-5xl text-black md:text-6xl lg:text-7xl font-bold mb-6">
+              Welcome to  <span className="text-orange-600 "> ViZack </span> Enterprises and Construction
             </h1>
-            <p className="text-xl mb-8 text-muted-foreground">
+            <p className="text-xl text-black max-w-3xl mx-auto mb-8">
+              We are a full-service construction company dedicated to transforming your vision into reality.Whether you need a small renovation, a large-scale commercial project, or anything in between, we provide end-to-end solutions for all your construction needs, including both interior and exterior services.
+            </p>
+            <p className="text-xl text-black mb-8 bg-orange-500 max-w-3xl mx-auto rounded-lg px-4 py-4">
               Your Trusted Partner for Comprehensive Construction Services
             </p>
             <div className="mb-16 flex flex-col sm:flex-row justify-center gap-4">
@@ -106,23 +109,21 @@ export default function Home() {
                 <Link href="/services">Our Services</Link>
               </Button>
             </div>
-            <p className="text-xl -mb-10 mt- text-muted-foreground">
-              We are a full-service construction company dedicated to transforming your vision into reality.Whether you need a small renovation, a large-scale commercial project, or anything in between, we provide end-to-end solutions for all your construction needs, including both interior and exterior services.
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-24 bg-muted/50">
+      {/* Services Section */}  
+      <section className="py-2 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Our Services</h2>
-            <p className="text-muted-foreground">
+            <h2 className="text-3xl text-black font-bold text-black mb-4>
+              Our Services</h2> mb-4">Our Services</h2>
+            <p className="text-black">
               Comprehensive construction and property solutions tailored to your needs
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 border-orange-500">
             {services.map((service, index) => (
               <ServiceCard key={index} {...service} />
             ))}

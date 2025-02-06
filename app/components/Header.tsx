@@ -19,19 +19,20 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 bg-orange-400 backdrop-filter backdrop-blur supports-[backdrop-filter]:bg-orange-500/5">
+
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center">
             <Building className="h-8 w-8 text-secondary" />
-            <span className="text-2xl font-bold">ViZack</span>
+            <span className="text-lg text-black">ViZack Enterprises</span>
           </Link>
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <li key={item.name}>
-                <Link href={item.href} className="text-sm font-medium hover:text-secondary transition-colors">
+                <Link href={item.href} className="text-sm font-medium hover:text-secondary transition-colors text-black">
                   {item.name}
                 </Link>
               </li>

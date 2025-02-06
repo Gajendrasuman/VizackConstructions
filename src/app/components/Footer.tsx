@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Building } from "lucide-react"
+import { imgLoader } from "./Header"
+import Image from "next/image"
 
 const navigation = {
   main: [
@@ -10,10 +11,10 @@ const navigation = {
     { name: "Contact", href: "/contact" },
   ],
   services: [
-    { name: "Planning and Design", href: "/services" },
-    { name: "Construction Services", href: "/services" },
-    { name: "Interior Solutions", href: "/services" },
-    { name: "Renovation & Remodeling", href: "/services" },
+    { name: "Planning and Design", href: "/services/planning and design" },
+    { name: "Construction Services", href: "/services/construction services" },
+    { name: "Interior Solutions", href: "/services/interior solutions" },
+    { name: "Renovation & Remodeling", href: "/services/renovation & remodeling" },
   ],
   properties: [
     { name: "Residential Properties", href: "/properties" },
@@ -25,18 +26,32 @@ const navigation = {
     { name: "Our Process", href: "/about" },
     { name: "Sustainability", href: "/about" },
     { name: "Contact Us", href: "/contact" },
+    { name: "Intern With Us", href: "https://forms.gle/au6P4oBjpR6Zswq17" },
+    { name: "Career Options", href: "https://forms.gle/rvW3tUsGgnY56HTY8" },
+    { name: "Customer Support", href: "http://wa.me/+919826258659" },
   ],
+  legals: [
+    { name: "Terms of Service", href: "https://docs.google.com/document/d/e/2PACX-1vSM1HbylMnlDx_xcDRx7qC5yui2Dw3zC2hPMnkl8on7sVDCV17SXHCFMpCrenccAiUT6mQCKcdv9hka/pub" },
+    { name: "Privacy Policy", href: "https://docs.google.com/document/d/e/2PACX-1vR9iaLnYhKATOLnNyREKE_TER60o2-TMu14efif_6QEIgpclwqcL0Wi64OEele0fkH-2-Gbng94BFD4/pub" },
+    { name: "License", href: "/license" },
+  ]
 }
 
 export default function Footer() {
   return (
     <footer className="bg-muted">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
-              <Building className="h-8 w-8 text-secondary" />
+              <Image
+                  src={"/logo/t_v.png"}
+                  width={50}
+                  height={50}
+                  alt="logo"
+                  loader={imgLoader}
+                />
               <span className="text-2xl font-bold">ViZack</span>
             </Link>
             <p className="text-muted-foreground mb-4 max-w-sm">
@@ -64,6 +79,20 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Properties</h3>
             <ul className="space-y-2">
               {navigation.properties.map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-muted-foreground hover:text-secondary transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legals */}
+          <div>
+            <h3 className="font-semibold mb-4">Legals</h3>
+            <ul className="space-y-2">
+              {navigation.legals.map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-muted-foreground hover:text-secondary transition-colors">
                     {item.name}

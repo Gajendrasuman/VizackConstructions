@@ -1,11 +1,14 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Building, Menu, X } from "lucide-react"
 import { useState } from "react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { cn } from "@/lib/utils"
+// import { cn } from "@/lib/utils"
+
+export const imgLoader = ({ src, width, quality }: { src: string, width: number, quality?: number }) => `${src}?w=${width}&q=${quality || 75}`
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -19,12 +22,19 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-orange-400 backdrop-filter backdrop-blur supports-[backdrop-filter]:bg-orange-500/5">
+    <header className="sticky top-0 z-50 backdrop-filter backdrop-blur supports-[backdrop-filter]:bg-black/5">
 
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <Building className="h-8 w-8 text-secondary" />
+            <Image
+              src={"/logo/t_logo.png"}
+              width={50}
+              height={50}
+              alt="logo"
+              loader={imgLoader}
+              
+            />
             <span className="text-lg text-black">ViZack Enterprises</span>
           </Link>
 
@@ -42,7 +52,7 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <Button
               asChild
-              className="hidden md:inline-flex bg-secondary text-secondary-foreground hover:bg-secondary/90"
+              className="hidden md:inline-flex bg-secondary text-secondary-foreground hover:bg-muted transition-colors hover:text-white "
             >
               <Link href="/contact">Get a Quote</Link>
             </Button>

@@ -1,66 +1,66 @@
 import Link from "next/link"
+import { Kanit, Jura } from "next/font/google"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {
-  Building2,
-  Brush,
-  Wrench,
   Users,
   Clock,
   DollarSign,
-  Leaf,
-  Building,
-  PaintBucket,
-  Lightbulb,
-  Hammer,
+  Leaf
 } from "lucide-react"
 import ServiceCard from "./components/ServiceCard"
+import { services } from "./services/page"
 
-const services = [
-  {
-    icon: Building,
-    title: "Planning and Design",
-    description:
-      "Customized architectural designs, structural planning, and interior/exterior design concepts with 3D visualization.",
-  },
-  {
-    icon: Building2,
-    title: "Construction Services",
-    description:
-      "Full-service construction for residential, commercial, hotels, restaurants, offices, and industrial facilities.",
-  },
-  {
-    icon: Hammer,
-    title: "Structural Work",
-    description: "Expert RCC structures, brickwork, plastering, and fabrication work for lasting durability.",
-  },
-  {
-    icon: Brush,
-    title: "Interior Solutions",
-    description:
-      "Complete interior services including flooring, false ceilings, modular kitchens, and custom furniture.",
-  },
-  {
-    icon: PaintBucket,
-    title: "Exterior Solutions",
-    description: "Professional landscaping, exterior painting, paver installation, and fencing solutions.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Utilities & Installations",
-    description: "Comprehensive plumbing, electrical, HVAC systems, and smart home integrations.",
-  },
-  {
-    icon: Wrench,
-    title: "Renovation & Remodeling",
-    description: "Expert renovation services for homes, offices, and historical building restoration.",
-  },
-  {
-    icon: Building2,
-    title: "Property Services",
-    description: "Professional property rental and sales services for residential and commercial properties.",
-  },
-]
+const kanit = Kanit({
+  weight: ["400", "700"],
+  subsets: ["latin"]
+})
+
+// const services = [
+//   {
+//     icon: Building,
+//     title: "Planning and Design",
+//     description:
+//       "Customized architectural designs, structural planning, and interior/exterior design concepts with 3D visualization.",
+//   },
+//   {
+//     icon: Building2,
+//     title: "Construction Services",
+//     description:
+//       "Full-service construction for residential, commercial, hotels, restaurants, offices, and industrial facilities.",
+//   },
+//   {
+//     icon: Hammer,
+//     title: "Structural Work",
+//     description: "Expert RCC structures, brickwork, plastering, and fabrication work for lasting durability.",
+//   },
+//   {
+//     icon: Brush,
+//     title: "Interior Solutions",
+//     description:
+//       "Complete interior services including flooring, false ceilings, modular kitchens, and custom furniture.",
+//   },
+//   {
+//     icon: PaintBucket,
+//     title: "Exterior Solutions",
+//     description: "Professional landscaping, exterior painting, paver installation, and fencing solutions.",
+//   },
+//   {
+//     icon: Lightbulb,
+//     title: "Utilities & Installations",
+//     description: "Comprehensive plumbing, electrical, HVAC systems, and smart home integrations.",
+//   },
+//   {
+//     icon: Wrench,
+//     title: "Renovation & Remodeling",
+//     description: "Expert renovation services for homes, offices, and historical building restoration.",
+//   },
+//   {
+//     icon: Building2,
+//     title: "Property Services",
+//     description: "Professional property rental and sales services for residential and commercial properties.",
+//   },
+// ]
 
 const values = [
   {
@@ -89,10 +89,10 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-white relative py-24 overflow-hidden hero-pattern">
+      <section className="bg-[#EBE7E1] tracking-wider relative py-24 overflow-hidden hero-pattern">
         <div className="container mx-auto px-4">
           <div className=" max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl text-black md:text-6xl lg:text-7xl font-bold mb-6">
+            <h1 className={"text-5xl text-black md:text-6xl lg:text-7xl font-bold mb-6 " + kanit.className}>
               Welcome to  <span className="text-orange-600 "> ViZack </span> Enterprises and Construction
             </h1>
             <p className="text-xl text-black max-w-3xl mx-auto mb-8">
@@ -102,40 +102,57 @@ export default function Home() {
               Your Trusted Partner for Comprehensive Construction Services
             </p>
             <div className="mb-16 flex flex-col sm:flex-row justify-center gap-4">
-              <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
+              <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-muted-foreground hover:text-white transition-colors">
                 <Link href="/contact">Get Started</Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" className="hover:bg-secondary hover:text-secondary-foreground bg-muted-foreground text-white transition-colors">
                 <Link href="/services">Our Services</Link>
               </Button>
             </div>
+            {/* <iframe width="873" height="491" src="https://www.youtube.com/embed/fIr3iKTMRmo" title="Construction Company Profile - After Effects Template" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
+            {/* <video src="https://youtu.be/fIr3iKTMRmo" controls autoPlay loop muted className="w-full max-w-3xl mx-auto">
+              
+            </video> */}
+            <video
+              src="https://time54.co.uk/wp-content//uploads//2023//10//time45render.mp4"
+              autoPlay
+              loop
+              muted
+              className="w-full max-w-3xl mx-auto"
+              
+            >
+              Your browser does not support the video tag. 
+            </video>
+
           </div>
         </div>
       </section>
 
       {/* Services Section */}  
-      <section className="py-2 bg-white">
+      <section className="py-2 bg-[#EBE7E1]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl text-black font-bold text-black mb-4>
-              Our Services</h2> mb-4">Our Services</h2>
+            <h2 className="text-3xl font-bold text-black mb-4 text-secondary txt">
+              Our Services</h2>
             <p className="text-black">
               Comprehensive construction and property solutions tailored to your needs
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 border-orange-500">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 border-orange-500">
             {services.map((service, index) => (
-              <ServiceCard key={index} {...service} />
+              <Link href={"/services/" + service.title.toLowerCase()} passHref>
+                <ServiceCard key={index} {...service} />
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-24">
+      <section className="py-24 shd my-8 ">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Why Choose Us</h2>
+            <h2 className="text-3xl font-bold mb-4 text-secondary txt">Why Choose Us</h2>
             <p className="text-muted-foreground">
               We deliver excellence through our core values and commitment to quality
             </p>
@@ -168,7 +185,7 @@ export default function Home() {
               asChild
               size="lg"
               variant="outline"
-              className="bg-secondary-foreground text-secondary hover:bg-secondary-foreground/90"
+              className="bg-white/90 text-secondary txt-sm hover:bg-secondary-foreground hover:text-white transition-colors"
             >
               <Link href="/contact">Get in Touch</Link>
             </Button>

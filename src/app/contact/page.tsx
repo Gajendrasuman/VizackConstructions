@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import Link from "next/link"
 
 export default function Contact() {
   return (
@@ -26,21 +27,31 @@ export default function Contact() {
                     <Phone className="w-5 h-5 text-secondary mt-1" />
                     <div>
                       <p className="font-medium">Phone</p>
-                      <p className="text-muted-foreground">[Your Contact Number]</p>
+                      <p className="text-muted-foreground">
+                        <Link href={"tel:%20+919826258659"} className="hover:text-secondary transition-colors">
+                        +91 9826258659
+                        </Link>
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <Mail className="w-5 h-5 text-secondary mt-1" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-muted-foreground">[Your Email Address]</p>
+                      <p className="text-muted-foreground">
+                        <Link href={"mailto:info@vizackenterprises.com"} className="hover:text-secondary transition-colors">
+                          info@vizackenterprises.com
+                        </Link>
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <MapPin className="w-5 h-5 text-secondary mt-1" />
                     <div>
                       <p className="font-medium">Address</p>
-                      <p className="text-muted-foreground">[Your Office Address]</p>
+                      <p className="text-muted-foreground">
+                        Plot no. 2, Sector 2, Industrial Area, Chandigarh, India
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">

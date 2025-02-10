@@ -33,6 +33,7 @@
     --ring: 42 98% 53%;
 
     --radius: 0.5rem;
+    
   }
 }
 
@@ -44,6 +45,10 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+*{
+  scroll-behavior: smooth;
 }
 
 .txt {

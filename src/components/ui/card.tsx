@@ -1,6 +1,14 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
+import { Teko, Montserrat, Oswald } from "next/font/google"
+
+const teko = Montserrat({
+    subsets: ["latin"],
+    display: "swap",
+    weight: ["700"]
+})
+
 
 const Card = React.forwardRef<
   HTMLDivElement,
@@ -9,7 +17,7 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      "rounded-lg border bg-card text-card-foreground shadow-md shadow-black/50",
       className
     )}
     {...props}
@@ -23,7 +31,7 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    className={cn("flex flex-col space-y-1.5 p-6", teko.className, className)}
     {...props}
   />
 ))

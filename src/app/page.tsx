@@ -10,57 +10,23 @@ import {
 } from "lucide-react"
 import ServiceCard from "./components/ServiceCard"
 import { services } from "./services/page"
+import { Montserrat, Oswald, Poppins, Bebas_Neue, Raleway, Teko, Bungee, Anton } from "next/font/google"
 
-const kanit = Kanit({
-  weight: ["400", "700"],
+const kanit = Teko({
+  weight: ["700"],
   subsets: ["latin"]
 })
 
-// const services = [
-//   {
-//     icon: Building,
-//     title: "Planning and Design",
-//     description:
-//       "Customized architectural designs, structural planning, and interior/exterior design concepts with 3D visualization.",
-//   },
-//   {
-//     icon: Building2,
-//     title: "Construction Services",
-//     description:
-//       "Full-service construction for residential, commercial, hotels, restaurants, offices, and industrial facilities.",
-//   },
-//   {
-//     icon: Hammer,
-//     title: "Structural Work",
-//     description: "Expert RCC structures, brickwork, plastering, and fabrication work for lasting durability.",
-//   },
-//   {
-//     icon: Brush,
-//     title: "Interior Solutions",
-//     description:
-//       "Complete interior services including flooring, false ceilings, modular kitchens, and custom furniture.",
-//   },
-//   {
-//     icon: PaintBucket,
-//     title: "Exterior Solutions",
-//     description: "Professional landscaping, exterior painting, paver installation, and fencing solutions.",
-//   },
-//   {
-//     icon: Lightbulb,
-//     title: "Utilities & Installations",
-//     description: "Comprehensive plumbing, electrical, HVAC systems, and smart home integrations.",
-//   },
-//   {
-//     icon: Wrench,
-//     title: "Renovation & Remodeling",
-//     description: "Expert renovation services for homes, offices, and historical building restoration.",
-//   },
-//   {
-//     icon: Building2,
-//     title: "Property Services",
-//     description: "Professional property rental and sales services for residential and commercial properties.",
-//   },
-// ]
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+})
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  display: "swap",
+})
+
 
 const values = [
   {

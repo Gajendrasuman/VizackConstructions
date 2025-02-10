@@ -15,14 +15,14 @@ const navigation = [
   { name: "Services", href: "/services" },
   { name: "Properties", href: "/properties" },
   { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  { name: "Contact", href: "/contact#contact" },
 ]
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 backdrop-filter backdrop-blur supports-[backdrop-filter]:bg-black/5">
+    <header className="sticky top-0 z-50 backdrop-filter backdrop-blur supports-[backdrop-filter]:bg-[#0F1729]/5">
 
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
@@ -54,7 +54,7 @@ export default function Header() {
               asChild
               className="hidden md:inline-flex bg-secondary text-secondary-foreground hover:bg-muted transition-colors hover:text-white "
             >
-              <Link href="/contact">Get a Quote</Link>
+              <Link href="/contact#contact">Get a Quote</Link>
             </Button>
 
             {/* Mobile Menu */}

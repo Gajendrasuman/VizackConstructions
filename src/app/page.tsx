@@ -98,7 +98,7 @@ export default function Home() {
       <section className="py-2 bg-[#EBE7E1]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold text-black mb-4 text-secondary txt">
+            <h2 className={"text-3xl text-orange-500 mb-4 " + kanit.className}>
               Our Services</h2>
             <p className="text-black">
               Comprehensive construction and property solutions tailored to your needs
@@ -118,7 +118,7 @@ export default function Home() {
       <section className="py-24 shd my-8 ">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-secondary txt">Why Choose Us</h2>
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 " + kanit.className}>Why Choose Us</h2>
             <p className="text-muted-foreground">
               We deliver excellence through our core values and commitment to quality
             </p>
@@ -140,7 +140,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-secondary text-secondary-foreground">
+      <section className="mx-auto max-w-3xl py-24 bg-orange-500 text-secondary-foreground rounded-lg">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>

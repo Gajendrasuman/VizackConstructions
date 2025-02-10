@@ -42,7 +42,7 @@ export default function Header() {
           <ul className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <li key={item.name}>
-                <Link href={item.href} className="text-sm font-medium hover:text-secondary transition-colors text-black">
+                <Link href={item.href} className="text-sm font-medium hover:text-orange-500 transition-colors text-black">
                   {item.name}
                 </Link>
               </li>
@@ -54,7 +54,7 @@ export default function Header() {
               asChild
               className="hidden md:inline-flex bg-secondary text-secondary-foreground hover:bg-muted transition-colors hover:text-white "
             >
-              <Link href="/contact#contact">Get a Quote</Link>
+              <Link href="/contact#contact">Contact Us</Link>
             </Button>
 
             {/* Mobile Menu */}
@@ -65,12 +65,20 @@ export default function Header() {
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                <div className="flex flex-col h-full">
+              <SheetContent side="right" className="bg-gray-700 w-[300px] sm:w-[400px]">
+                <div className="flex flex-col h-full ">
                   <div className="flex items-center justify-between pb-6">
                     <Link href="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
-                      <Building className="h-6 w-6 text-secondary" />
-                      <span className="text-xl font-bold">ViZack</span>
+                      {/* <Building className="h-6 w-6 text-secondary" />  */}
+                       <Image
+                                          src={"/logo/logo.png"}
+                                          width={50}
+                                          height={50}
+                                          alt="logo"
+                                        loader={imgLoader}
+                                        className="w-12 h-12 object-center rounded-full scale-105"
+                                        />
+                      <span className="text-xl font-bold">ViZack Enterprises</span>
                     </Link>
                     <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
                       <X className="h-6 w-6" />
@@ -92,9 +100,9 @@ export default function Header() {
                       ))}
                     </ul>
                   </nav>
-                  <Button asChild className="mt-6 bg-secondary text-secondary-foreground hover:bg-secondary/90">
+                  <Button asChild className="mt-6 bg-orange-500 text-secondary-foreground hover:bg-secondary/90">
                     <Link href="/contact" onClick={() => setIsOpen(false)}>
-                      Get a Quote
+                      Contact Us
                     </Link>
                   </Button>
                 </div>

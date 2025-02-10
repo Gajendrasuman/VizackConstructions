@@ -1,6 +1,12 @@
 import Hero from "../components/Hero"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Users, Clock, DollarSign, Leaf, CheckCircle2 } from "lucide-react"
+import { Teko } from "next/font/google"
+const kanit = Teko({
+  weight: ["700"],
+  subsets: ["latin"]
+})
+
 
 const values = [
   {
@@ -56,7 +62,7 @@ export default function About() {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-secondary txt mb-8 text-center">Our Story</h2>
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 text-center "+kanit.className}>Our Story</h2>
             <div className="flex flex-col gap-4 text-muted prose-lg dark:prose-invert mx-auto">
               <p>
                 At <b>ViZack Enterprises</b>, we don&apos;t just build structures—we bring visions to life. Our approach goes beyond bricks and mortar; we craft experiences, shape environments, and redefine spaces with creativity and precision.
@@ -84,7 +90,7 @@ export default function About() {
       <section className="py-24 ">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-secondary txt">Our Values</h2>
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 "+kanit.className}>Our Values</h2>
             <p className="text-muted-foreground">The principles that guide our work and relationships</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -106,7 +112,7 @@ export default function About() {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-secondary txt">Our Process</h2>
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 "+kanit.className}>Our Process</h2>
             <p className="text-muted-foreground">How we bring your vision to life</p>
           </div>
           <div className="grid gap-8">
@@ -131,7 +137,7 @@ export default function About() {
       {/* Sustainability Section */}
       ```tsx file="app/about/page.tsx" continued
       {/* Sustainability Section */}
-      <section className="py-24 bg-secondary text-secondary-foreground">
+      <section className="py-24 bg-orange-500 rounded-lg max-w-3xl mx-auto text-secondary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Our Commitment to Sustainability</h2>

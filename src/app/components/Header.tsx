@@ -52,7 +52,7 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <Button
               asChild
-              className="hidden md:inline-flex bg-secondary text-secondary-foreground hover:bg-muted transition-colors hover:text-white "
+              className="hidden md:inline-flex bg-orange-500 text-secondary-foreground hover:bg-muted transition-colors hover:text-white "
             >
               <Link href="/contact#contact">Contact Us</Link>
             </Button>

@@ -17,7 +17,7 @@ export default function Service() {
 
     return (
         <main className='text-muted'>
-            <div className="bg-secondary text-white txt flex items-center gap-2 py-2 px-4">
+            <div className="bg-orange-500 text-white txt flex items-center gap-2 py-2 px-4">
                 <Link href="/services">Services</Link> 
                 <ChevronRight size={16} />
                 <Link href={"/services" + "/" + service.toLowerCase()} className='capitalize'>{service}</Link>

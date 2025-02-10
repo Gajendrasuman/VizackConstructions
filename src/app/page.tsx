@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Kanit, Jura } from "next/font/google"
+import HoverButton from "./components/HoverButton"
+import { Kanit, Jura, Karantina } from "next/font/google"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {
@@ -64,15 +65,16 @@ export default function Home() {
             <p className="text-xl text-black max-w-3xl mx-auto mb-8">
               We are a full-service construction company dedicated to transforming your vision into reality.Whether you need a small renovation, a large-scale commercial project, or anything in between, we provide end-to-end solutions for all your construction needs, including both interior and exterior services.
             </p>
-            <p className="text-xl text-black mb-8 bg-orange-500 max-w-3xl mx-auto rounded-lg px-4 py-4">
+            <p className={"text-xl text-black mb-8 bg-orange-500 max-w-3xl mx-auto rounded-lg px-4 py-4 "+kanit.className}>
               Your Trusted Partner for Comprehensive Construction Services
             </p>
             <div className="mb-16 flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-muted-foreground hover:text-white transition-colors">
-                <Link href="/contact">Get Started</Link>
+                <HoverButton text="Get Started" href="/contact"></HoverButton>
               </Button>
               <Button asChild size="lg" className="hover:bg-secondary hover:text-secondary-foreground bg-muted-foreground text-white transition-colors">
-                <Link href="/services">Our Services</Link>
+              <HoverButton text="Our Services" href="/services"></HoverButton>
+
               </Button>
             </div>
             {/* <iframe width="873" height="491" src="https://www.youtube.com/embed/fIr3iKTMRmo" title="Construction Company Profile - After Effects Template" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
@@ -151,9 +153,18 @@ export default function Home() {
               asChild
               size="lg"
               variant="outline"
-              className="bg-white/90 text-secondary txt-sm hover:bg-secondary-foreground hover:text-white transition-colors"
             >
-              <Link href="/contact">Get in Touch</Link>
+              {/* <Link href="/contact"
+              className="mr-auto rounded-lg border border-gray-500 bg-transparent px-4 py-2 text-gray-500 shadow transition-all 
+                 hover:border-transparent hover:bg-gray-500 hover:text-white hover:shadow-lg">
+        Get in Touch
+            </Link> */}
+            <HoverButton
+            text="Get in Touch"
+            href="/contact#contact"
+
+            ></HoverButton>
+
             </Button>
           </div>
         </div>

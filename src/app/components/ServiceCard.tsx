@@ -1,23 +1,26 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import type { LucideIcon } from "lucide-react"
+import Image from "next/image"
 
 interface ServiceCardProps {
-    icon: LucideIcon
+    imageSrc: string
     title: string
     description: string
 }
 
-export default function ServiceCard({ icon: Icon, title, description }: ServiceCardProps) {
+export default function ServiceCard({ imageSrc, title, description }: ServiceCardProps) {
     return (
-        <Card className="group hover:border-secondary transition-colors">
+        <Card className="bg-white border border-orange-500 shadow-lg rounded-lg p-6 flex flex-col items-center text-center h-full">
             <CardHeader>
-                <Icon className="w-12 h-12 mb-4 text-secondary" />
-                <CardTitle className="group-hover:text-secondary transition-colors">{title}</CardTitle>
+                <div className="flex justify-center w-full">
+                    <div className="relative w-28 h-28 mb-4"> {/* Increased size */}
+                        <Image src={imageSrc} alt={title} layout="fill" objectFit="contain" />
+                    </div>
+                </div>
+                <CardTitle className="text-xl font-semibold text-orange-500">{title}</CardTitle>
             </CardHeader>
-            <CardContent>
-                <CardDescription>{description}</CardDescription>
+            <CardContent className="flex-grow">
+                <CardDescription className="text-gray-700">{description}</CardDescription>
             </CardContent>
         </Card>
     )
 }
-

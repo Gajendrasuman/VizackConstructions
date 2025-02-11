@@ -31,22 +31,22 @@ const oswald = Oswald({
 
 const values = [
   {
-    icon: Users,
+    imageSrc: "/images/photo (1).jpg",
     title: "Client-Centric Approach",
     description: "We work closely with you to understand your needs and ensure every detail aligns with your vision.",
   },
   {
-    icon: Clock,
+    imageSrc: "/images/photo (2).jpg",
     title: "On-Time Delivery",
     description: "We understand the value of time and are committed to completing projects on schedule.",
   },
   {
-    icon: DollarSign,
+    imageSrc: "/images/photo (3).jpg",
     title: "Budget-Friendly",
     description: "We offer transparent pricing and tailor-made solutions to fit your budget requirements.",
   },
   {
-    icon: Leaf,
+    imageSrc: "/images/photo (4).jpg",
     title: "Sustainability",
     description: "We are committed to environmentally-friendly construction practices and energy-efficient solutions.",
   },
@@ -106,13 +106,17 @@ export default function Home() {
               Comprehensive construction and property solutions tailored to your needs
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 border-orange-500">
-            {services.map((service, index) => (
-              <Link href={"/services/" + service.title.toLowerCase()} passHref>
-                <ServiceCard key={index} {...service} />
-              </Link>
-            ))}
-          </div>
+         
+         
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {services.map((service, index) => (
+        <Link key={index} href={`/services/${service.title.toLowerCase()}`} passHref>
+            <div className="cursor-pointer">
+                <ServiceCard imageSrc={service.imageSrc} title={service.title} description={service.description} />
+            </div>
+        </Link>
+    ))}
+</div>
         </div>
       </section>
 
@@ -125,11 +129,11 @@ export default function Home() {
               We deliver excellence through our core values and commitment to quality
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <Card key={index} className="text-center">
                 <CardHeader>
-                  <value.icon className="w-12 h-12 mx-auto mb-4 text-secondary" />
+                  <img src= {value.imageSrc} className="w-12 h-12 mx-auto mb-4 text-secondary" />
                   <CardTitle>{value.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -137,7 +141,26 @@ export default function Home() {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </div> */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  {values.map((value, index) => (
+    <Card 
+      key={index} 
+      className="flex flex-col items-center justify-between p-6 border border-orange-500 bg-white shadow-lg rounded-2xl transition-transform hover:scale-105"
+    >
+      <CardHeader className="flex flex-col items-center">
+        <img src={value.imageSrc} className="w-20 h-20 mx-auto mb-4" alt={value.title} />
+        <CardTitle className="text-orange-500 font-bold">{value.title}</CardTitle>
+      </CardHeader>
+      <CardContent className="flex-grow flex flex-col">
+        <CardDescription className="text-gray-700 text-sm">{value.description}</CardDescription>
+      </CardContent>
+    </Card>
+  ))}
+
+ 
+</div>
+
         </div>
       </section>
 

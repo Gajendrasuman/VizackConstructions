@@ -91,17 +91,17 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className={"text-3xl font-bold mb-4 text-orange-500 "+kanit.className}>Our Values</h2>
-            <p className="text-muted-foreground">The principles that guide our work and relationships</p>
+            <p className="text-gray-800">The principles that guide our work and relationships</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card key={index}>
+              <Card className="bg-white" key={index}>
                 <CardHeader>
-                  <value.icon className="w-12 h-12 mb-4 text-secondary" />
-                  <CardTitle>{value.title}</CardTitle>
+                  <value.icon className="w-12 h-12 mb-4 text-orange-500" />
+                  <CardTitle className="text-orange-500">{value.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription>{value.description}</CardDescription>
+                  <CardDescription className="text-black">{value.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -146,24 +146,24 @@ export default function About() {
               incorporating energy-efficient solutions, we ensure our projects have a minimal environmental impact.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="bg-secondary-foreground text-secondary">
+              <Card className="bg-gray-200 text-orange-500">
                 <CardHeader>
-                  <CheckCircle2 className="w-12 h-12 mb-4 text-secondary" />
+                  <CheckCircle2 className="w-12 h-12 mb-4 text-orange-500 txt" />
                   <CardTitle>Sustainable Materials</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-secondary/80">
+                  <CardDescription className="text-black">
                     We prioritize eco-friendly and locally sourced materials in our construction projects.
                   </CardDescription>
                 </CardContent>
               </Card>
-              <Card className="bg-secondary-foreground text-secondary">
+              <Card className="bg-gray-200 text-orange-500">
                 <CardHeader>
-                  <Leaf className="w-12 h-12 mb-4 text-secondary" />
-                  <CardTitle>Energy Efficiency</CardTitle>
+                  <Leaf className="w-12 h-12 mb-4 text-orange-500" />
+                  <CardTitle >Energy Efficiency</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-secondary/80">
+                  <CardDescription className="text-black">
                     Our designs incorporate energy-saving features and renewable energy solutions.
                   </CardDescription>
                 </CardContent>

@@ -60,7 +60,7 @@ export default function Home() {
       <section className="bg-[#EBE7E1] tracking-wider relative py-24 overflow-hidden hero-pattern">
         <div className="container mx-auto px-4">
           <div className=" max-w-4xl mx-auto text-center">
-          <h1 className={"mt-4 mb-16 text-5xl tracking-tight text-gray-900 sm:mt-5 sm:leading-none lg:mt-6 lg:text-7xl xl:text-8xl "+kanit.className}>
+          <h1 className={" mb-16 text-5xl tracking-tight text-gray-900 sm:mt-5 sm:leading-none lg:mt-6 lg:text-7xl xl:text-8xl "+kanit.className}>
                   <p className="sm:block ">Welcome to</p>
                   <span className="text-orange-600 mb-8 md:block">ViZack Enterprises</span>
                   <p className="text-zinc-500 md:block mt-4">Masters of {''}</p>
@@ -73,6 +73,16 @@ export default function Home() {
                       typeSpeed={70}
                       deleteSpeed={50}>
                     </Typewriter>
+            <video
+              src="https://time54.co.uk/wp-content//uploads//2023//10//time45render.mp4"
+              autoPlay
+              loop
+              muted
+              className="w-full max-w-3xl mx-auto"
+              
+            >
+              Your browser does not support the video tag. 
+            </video>
                   </span>
                 </h1>
             <h1 className={"text-3xl text-black md:text-4xl lg:text-5xl font-bold mb-6 " + kanit.className}>
@@ -97,16 +107,6 @@ export default function Home() {
             {/* <video src="https://youtu.be/fIr3iKTMRmo" controls autoPlay loop muted className="w-full max-w-3xl mx-auto">
               
             </video> */}
-            <video
-              src="https://time54.co.uk/wp-content//uploads//2023//10//time45render.mp4"
-              autoPlay
-              loop
-              muted
-              className="w-full max-w-3xl mx-auto"
-              
-            >
-              Your browser does not support the video tag. 
-            </video>
 
           </div>
         </div>
@@ -145,19 +145,6 @@ export default function Home() {
               We deliver excellence through our core values and commitment to quality
             </p>
           </div>
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="text-center">
-                <CardHeader>
-                  <img src= {value.imageSrc} className="w-12 h-12 mx-auto mb-4 text-secondary" />
-                  <CardTitle>{value.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>{value.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div> */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
   {values.map((value, index) => (
     <Card 

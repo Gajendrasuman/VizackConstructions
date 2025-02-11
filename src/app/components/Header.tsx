@@ -22,7 +22,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 backdrop-filter backdrop-blur supports-[backdrop-filter]:bg-[#0F1729]/5">
+    <header className="sticky top-0 z-50 bg-white shadow-lg">
 
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">

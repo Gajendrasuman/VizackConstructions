@@ -1,19 +1,10 @@
 import Hero from "../components/Hero";
 import Link from "next/link";
 import ServiceCard from "../components/ServiceCard";
-import {
-  PencilRuler,
-  Drill,
-  BrickWall,
-  LampWallDown,
-  PaintRoller,
-  CircuitBoard,
-  ReplaceAll,
-} from "lucide-react";
+import FeatureCard from "../components/FeatureCard";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -174,8 +165,14 @@ import {
 //     },
 //   },
 // ];
+type Features = { [key: string]: string };
 
-export const services = [
+export const services: {
+  imageSrc: string;
+  title: string;
+  description: string;
+  features: Features;
+}[] = [
   {
     imageSrc: "/images/photo (1).jpg",
     title: "Planning and Design",
@@ -280,7 +277,7 @@ Contact us today, and let’s create something extraordinary together!"
       />
 
       <div className="py-24">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 bg-white">
           <div className="grid gap-24">
             {services.map((service, index) => (
               <div
@@ -290,33 +287,7 @@ Contact us today, and let’s create something extraordinary together!"
                 <Link href={"/services/" + service.title.toLowerCase()} passHref>
                   <ServiceCard {...service} />
                 </Link>
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="uppercase tracking-wider font-bold">Features & Benefits</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      {Object.entries(service.features).map(
-                        ([key, value], index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <span className="text-secondary">•</span>
-                            <span className="flex flex-col font-bold tracking-wider uppercase">
-                              {key}
-                            <span className="text-muted-foreground font-normal tracking-normal lowercase first-letter:uppercase">{value}</span>
-
-                            </span>
-                          </li>
-                        )
-                      )}
-                      {/* {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <span className="text-secondary">•</span>
-                          <span>{feature}</span>
-                        </li>
-                      ))} */}
-                    </ul>
-                  </CardContent>
-                </Card>
+                <FeatureCard features={service.features}></FeatureCard>
               </div>
             ))}
           </div>

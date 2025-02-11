@@ -1,5 +1,7 @@
+"use client"
 import Link from "next/link"
 import HoverButton from "./components/HoverButton"
+import {Typewriter} from "react-simple-typewriter"
 import { Kanit, Jura, Karantina } from "next/font/google"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -11,7 +13,11 @@ import {
 } from "lucide-react"
 import ServiceCard from "./components/ServiceCard"
 import { services } from "./services/page"
-import { Montserrat, Oswald, Poppins, Bebas_Neue, Raleway, Teko, Bungee, Anton } from "next/font/google"
+import { Montserrat, Oswald, Teko, } from "next/font/google"
+import { Quicksand } from 'next/font/google'
+
+const quicksand = Quicksand({ subsets: ['latin'], weight: ["300", "400", "500", "600", "700"] });
+
 
 const kanit = Teko({
   weight: ["700"],
@@ -59,10 +65,25 @@ export default function Home() {
       <section className="bg-[#EBE7E1] tracking-wider relative py-24 overflow-hidden hero-pattern">
         <div className="container mx-auto px-4">
           <div className=" max-w-4xl mx-auto text-center">
-            <h1 className={"text-5xl text-black md:text-6xl lg:text-7xl font-bold mb-6 " + kanit.className}>
-              Welcome to  <span className="text-orange-600 "> ViZack </span> Enterprises and Construction
+          <h1 className={"mt-4 mb-16 text-5xl tracking-tight text-gray-900 sm:mt-5 sm:leading-none lg:mt-6 lg:text-7xl xl:text-8xl "+kanit.className}>
+                  <p className="sm:block ">Welcome to</p>
+                  <span className="text-orange-600 mb-8 md:block">ViZack Enterprises</span>
+                  <p className="text-zinc-500 md:block mt-4">Masters of {''}</p>
+                  <span>
+                    <Typewriter
+                      words={['Planning and Design', 'Structural Work', 'Construction Services', 'Interior Solutions', 'Exterior Solutions', 'Utilities and Installation','Renovation and Remodelling']}
+                      loop={0}
+                      cursor
+                      cursorStyle='_'
+                      typeSpeed={70}
+                      deleteSpeed={50}>
+                    </Typewriter>
+                  </span>
+                </h1>
+            <h1 className={"text-3xl text-black md:text-4xl lg:text-5xl font-bold mb-6 " + kanit.className}>
+              Your  <span className="text-orange-600 "> One Stop </span> For All of Your Architectural Needs.
             </h1>
-            <p className="text-xl text-black max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-quicksand text-black max-w-3xl mx-auto mb-8">
               We are a full-service construction company dedicated to transforming your vision into reality.Whether you need a small renovation, a large-scale commercial project, or anything in between, we provide end-to-end solutions for all your construction needs, including both interior and exterior services.
             </p>
             <p className={"text-xl text-black mb-8 bg-orange-500 max-w-3xl mx-auto rounded-lg px-4 py-4 "+kanit.className}>
@@ -168,7 +189,7 @@ export default function Home() {
       <section className="mx-auto max-w-3xl py-24 bg-orange-500 text-secondary-foreground rounded-lg">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+            <h2 className="text-3xl bg-white p-4 rounded-lg shadow max-w-lg mx-auto font-bold mb-4">Ready to Start Your Project?</h2>
             <p className="mb-8">
               Contact us today for a consultation or to request a quote. Let's build something extraordinary together!
             </p>

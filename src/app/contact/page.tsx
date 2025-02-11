@@ -139,8 +139,8 @@ export default function Contact() {
                     <div>
                       <p className="font-medium">Phone</p>
                       <p className="text-muted-foreground">
-                        <Link href={"tel:%20+919826258659"} className="hover:text-secondary transition-colors">
-                        +91 9826258659
+                        <Link href={"tel:%20+917771877195"} className="hover:text-secondary transition-colors">
+                        +91-7771877195
                         </Link>
                       </p>
                     </div>

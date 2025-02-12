@@ -115,3 +115,21 @@
     text-wrap: balance;
   }
 }
+
+.lines{
+  position: relative;
+  &:before, &:after{
+    content: "";
+    width: 4rem;
+    height: 0.2rem;
+    position: absolute;
+    background: black;
+    z-index: 2;
+    top: 50%;
+    right: 28%;
+
+  }
+  &:after{
+    left: 28%;
+  }
+}

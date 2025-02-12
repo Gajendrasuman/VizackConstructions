@@ -2,6 +2,7 @@ import Hero from "../../components/Hero"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Users, Clock, DollarSign, Leaf, CheckCircle2 } from "lucide-react"
 import { Teko } from "next/font/google"
+import { RoughNotation } from "react-rough-notation"
 const kanit = Teko({
   weight: ["700"],
   subsets: ["latin"]
@@ -62,7 +63,7 @@ export default function About() {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className={"text-3xl font-bold mb-4 text-orange-500 text-center "+kanit.className}>Our Story</h2>
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 text-center font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 "}>Our Story</h2>
             <div className="flex flex-col gap-4 text-muted prose-lg dark:prose-invert mx-auto">
               <p>
                 At <b>ViZack Enterprises</b>, we don&apos;t just build structures—we bring visions to life. Our approach goes beyond bricks and mortar; we craft experiences, shape environments, and redefine spaces with creativity and precision.
@@ -89,13 +90,15 @@ export default function About() {
       {/* Values Section */}
       <section className="py-24 ">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className={"text-3xl font-bold mb-4 text-orange-500 "+kanit.className}>Our Values</h2>
+          <div className="max-w-3xl mx-auto text-center mb-16 ">
+            {/* <RoughNotation type="box" show={true} animationDelay={500}> */}
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 "}>Our Values</h2>
+            {/* </RoughNotation> */}
             <p className="text-gray-800">The principles that guide our work and relationships</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card className="bg-white" key={index}>
+              <Card className="bg-gradient-to-tl from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25" key={index}>
                 <CardHeader>
                   <value.icon className="w-12 h-12 mb-4 text-orange-500" />
                   <CardTitle className="text-orange-500">{value.title}</CardTitle>
@@ -112,12 +115,12 @@ export default function About() {
       <section id="process" className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className={"text-3xl font-bold mb-4 text-orange-500 "+kanit.className}>Our Process</h2>
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 "}>Our Process</h2>
             <p className="text-muted-foreground">How we bring your vision to life</p>
           </div>
           <div className="grid gap-8">
             {process.map((step, index) => (
-              <Card key={index}>
+              <Card key={index} className="bg-gradient-to-tl from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 text-muted">
                 <CardHeader>
                   <div className="flex items-start gap-4">
                     <div className="flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-secondary-foreground font-bold">
@@ -135,7 +138,7 @@ export default function About() {
         </div>
       </section>
       {/* Sustainability Section */}
-      <section id="sustainability" className="py-24 bg-orange-500 rounded-lg max-w-3xl mx-auto text-secondary-foreground">
+      {/* <section id="sustainability" className="py-24 bg-orange-500 rounded-lg max-w-3xl mx-auto text-secondary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Our Commitment to Sustainability</h2>
@@ -169,7 +172,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

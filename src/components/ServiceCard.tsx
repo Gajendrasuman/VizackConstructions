@@ -11,11 +11,11 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ imageSrc, title, description }: ServiceCardProps) {
     return (
-        <Card className="bg-gradient-to-b from-[#EBE7E1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 rounded-lg p-6 flex flex-col items-center text-center h-full">
+        <Card className="bg-gradient-to-tr from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 rounded-lg p-6 flex flex-col items-center text-center h-full">
             <CardHeader>
                 <div className="flex justify-center w-full">
-                    <div className="relative w-28 h-28 mb-4"> {/* Increased size */}
-                        <Image src={imageSrc} alt={title} width={150} height={150} />
+                    <div className="relative  mb-4"> {/* Increased size */}
+                        <Image src={imageSrc} alt={title} width={250} height={250} className="w-96 aspect-video object-cover mix-blend-darken" />
                     </div>
                 </div>
                 <CardTitle className="text-xl font-semibold text-orange-500">{title}</CardTitle>

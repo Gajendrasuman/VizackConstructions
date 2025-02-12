@@ -20,7 +20,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Contact Information */}
             <div className="lg:col-span-1 space-y-8">
-              <Card>
+              <Card className="">
                 <CardHeader>
                   <CardTitle>Contact Information</CardTitle>
                   <CardDescription>Reach out to us through any of these channels</CardDescription>
@@ -62,8 +62,7 @@ export default function Contact() {
                     <div>
                       <p className="font-medium">Business Hours</p>
                       <div className="text-muted-foreground">
-                        <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                        <p>Saturday: 10:00 AM - 2:00 PM</p>
+                        <p>Monday - Saturday: 10:00 AM - 7:00 PM</p>
                         <p>Sunday: Closed</p>
                       </div>
                     </div>

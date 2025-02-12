@@ -1,18 +1,20 @@
+import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface FeatureCardProps {
-  features: Record<string, string>; // Defines features as key-value pairs
+  features: Record<string, string>;
+  image: string; // Defines features as key-value pairs
 }
 
-export default function FeatureCard({ features }: FeatureCardProps) {
+export default function FeatureCard({ features, image }: FeatureCardProps) {
   return (
-    <Card className="bg-white shadow-lg shadow-black/25 rounded-2xl ">
+    <Card className="bg-gradient-to-tl from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 rounded-2xl ">
       <CardHeader>
         <CardTitle className="text-orange-500 uppercase tracking-wider font-bold">
           Features & Benefits
         </CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex gap-4">
         <ul className="space-y-2 text-black">
           {Object.entries(features).map(([key, value], index) => (
             <li key={index} className="flex items-start gap-2">
@@ -26,6 +28,14 @@ export default function FeatureCard({ features }: FeatureCardProps) {
             </li>
           ))}
         </ul>
+
+        <Image
+          src={image}
+          width={150}
+          height={150}
+          alt={image}
+          className="object-contain w-1/2 mix-blend-darken "
+        />
       </CardContent>
     </Card>
   );

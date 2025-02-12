@@ -4,6 +4,7 @@ import { Building, Home, Factory } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Teko } from "next/font/google"
+import HoverButton from "@/components/HoverButton"
 const kanit = Teko({
   weight: ["700"],
   subsets: ["latin"]
@@ -65,9 +66,9 @@ export default function Properties() {
           <div className="grid gap-16">
             {propertyTypes.map((type, index) => (
               <div key={index} className="grid md:grid-cols-2 gap-8 items-start">
-                <Card>
+                <Card className="bg-gradient-to-tr border border-[#d3d3d3]  from-[#e4e3e1] hover:from-white hover:to-white to-white text-muted">
                   <CardHeader>
-                    <type.icon className="w-12 h-12 mb-4 text-secondary" />
+                    <type.icon className="w-12 h-12 mb-4 text-orange-500" />
                     <CardTitle>{type.title}</CardTitle>
                     <CardDescription>{type.description}</CardDescription>
                   </CardHeader>
@@ -75,14 +76,14 @@ export default function Properties() {
                     <ul className="space-y-2">
                       {type.features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-2">
-                          <span className="text-secondary">•</span>
+                          <span className="text-orange-500">•</span>
                           <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="bg-gradient-to-bl border border-[#d3d3d3]  from-[#e4e3e1] hover:from-white hover:to-white to-white text-muted">
                   <CardHeader>
                     <CardTitle>Available Options</CardTitle>
                     <CardDescription>Choose from our selection of properties</CardDescription>
@@ -98,7 +99,7 @@ export default function Properties() {
                         <p className="text-muted-foreground">Buy your dream property</p>
                       </div>
                     </div>
-                    <Button asChild className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90">
+                    <Button asChild className="w-full bg-orange-500 text-orange-500-foreground hover:bg-orange-500/90">
                       <Link href="/contact">Enquire Now</Link>
                     </Button>
                   </CardContent>
@@ -118,7 +119,7 @@ export default function Properties() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index}>
+              <Card key={index} className="bg-gradient-to-bl border border-[#d3d3d3]  from-[#e4e3e1] hover:from-white hover:to-white to-white text-muted">
                 <CardHeader>
                   <CardTitle>{benefit.title}</CardTitle>
                 </CardHeader>
@@ -132,7 +133,7 @@ export default function Properties() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-secondary text-secondary-foreground">
+      <section className="py-24 bg-orange-500 text-orange-500-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Find Your Perfect Property?</h2>
@@ -141,7 +142,7 @@ export default function Properties() {
               asChild
               size="lg"
               variant="outline"
-              className="bg-secondary-foreground text-secondary hover:bg-secondary-foreground/90"
+              className="bg-secondary-foreground text-orange-500 hover:bg-orange-500-foreground/90"
             >
               <Link href="/contact">Contact Our Experts</Link>
             </Button>

@@ -7,6 +7,11 @@ import { meta } from "@/metadata/meta"
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import Loader from "../components/Loader"
+import { Teko, Montserrat } from "next/font/google"
+const kanit = Montserrat({
+  weight: ["600"],
+  subsets: ["latin"]
+})
 
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -21,10 +26,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="en">
-      <body className="bg-[#EBE7E1]">
+      <body className={"bg-[#EBE7E1] " + kanit.className}>
         {loading && <Loader />}
         <Header />
-        <main>{children}</main>
+        <main className={"" + kanit.className}>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

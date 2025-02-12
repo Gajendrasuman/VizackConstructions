@@ -161,7 +161,7 @@ export default function Contact() {
                     <div>
                       <p className="font-medium">Address</p>
                       <p className="text-muted-foreground">
-                        Plot no. 2, Sector 2, Industrial Area, Chandigarh, India
+                      Sakshi Greens, Sachin Tendulkar Marg, Near DB City, Hurawali, City Centre, Gwalior, India
                       </p>
                     </div>
                   </div>

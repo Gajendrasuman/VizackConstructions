@@ -105,7 +105,7 @@ export default function Home() {
                 <RoughNotation
                   show={true}
                   animationDuration={300}
-                  type="circle"
+                  type="underline"
                 >
                   {" "}
                   One Stop{" "}
@@ -128,23 +128,6 @@ export default function Home() {
             >
               Your Trusted Partner for Comprehensive Construction Services
             </p>
-            <div className="mb-16 flex flex-col sm:flex-row justify-center gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="bg-secondary text-secondary-foreground hover:bg-muted-foreground hover:text-white transition-colors"
-              >
-                <HoverButton text="Get Started" href="/contact"></HoverButton>
-              </Button>
-              {/* <Button asChild size="lg" className="hover:bg-secondary hover:text-secondary-foreground bg-muted-foreground text-white transition-colors">
-              <HoverButton text="Our Services" href="/services"></HoverButton>
-
-              </Button> */}
-            </div>
-            {/* <iframe width="873" height="491" src="https://www.youtube.com/embed/fIr3iKTMRmo" title="Construction Company Profile - After Effects Template" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
-            {/* <video src="https://youtu.be/fIr3iKTMRmo" controls autoPlay loop muted className="w-full max-w-3xl mx-auto">
-              
-            </video> */}
           </div>
         </div>
       </section>

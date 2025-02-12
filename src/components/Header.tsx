@@ -13,7 +13,6 @@ export const imgLoader = ({ src, width, quality }: { src: string, width: number,
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
-  { name: "Maintenance Contracts", href: "/maintenance" },
   { name: "Properties", href: "/properties" },
   { name: "About", href: "/about" },
   // { name: "Contact", href: "/contact#contact" },

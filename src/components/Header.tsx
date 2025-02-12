@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export const imgLoader = ({ src, width, quality }: { src: string, width: number, quality?: number }) => `${src}?w=${width}&q=${quality || 75}`
@@ -20,10 +20,31 @@ const navigation = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const navbarClasses = `sticky top-0 z-50 bg-[#EBE7E1] ${
+    isScrolled ? "shadow-lg" : ""
+  } transition-shadow duration-300`;
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-lg">
-      <nav className="container mx-auto px-4 py-4">
+    <header className={navbarClasses}>
+      <nav className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center">
             <Image

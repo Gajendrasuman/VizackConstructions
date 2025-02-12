@@ -1,12 +1,12 @@
 "use client"
 import  {metadata}  from "./metadata"
 import "@/styles/globals.css"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 import { meta } from "@/metadata/meta"
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
-import Loader from "./components/Loader"
+import Loader from "../components/Loader"
 
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

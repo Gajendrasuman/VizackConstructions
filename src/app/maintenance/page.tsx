@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Hero from "../components/Hero";
+import Hero from "../../components/Hero";
 
 export default function Maintenance() {
   return (

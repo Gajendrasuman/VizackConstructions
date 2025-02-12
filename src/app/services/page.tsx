@@ -1,7 +1,7 @@
-import Hero from "../components/Hero";
+import Hero from "../../components/Hero";
 import Link from "next/link";
-import ServiceCard from "../components/ServiceCard";
-import FeatureCard from "../components/FeatureCard";
+import ServiceCard from "../../components/ServiceCard";
+import FeatureCard from "../../components/FeatureCard";
 // export const services = [
 //   {
 //     imageSrc: "/images/photo (1).jpg",

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { usePathname } from "next/navigation"
 
 export const imgLoader = ({ src, width, quality }: { src: string, width: number, quality?: number }) => `${src}?w=${width}&q=${quality || 75}`
 
@@ -21,6 +22,7 @@ const navigation = [
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false);
+  const path = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,7 +63,7 @@ export default function Header() {
           <ul className="hidden md:flex items-center space-x-8 max-lg:space-x-4">
             {navigation.map((item) => (
               <li key={item.name} className="w-max">
-                <Link href={item.href} className="text-sm font-medium hover:text-orange-500 transition-colors text-black">
+                <Link href={item.href} className={`text-sm font-medium hover:text-orange-500 transition-colors ${item.href === path ? "text-orange-500" : "text-black"}`}>
                   {item.name}
                 </Link>
               </li>

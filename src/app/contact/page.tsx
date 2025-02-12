@@ -13,9 +13,9 @@ export default function Contact() {
 
       
 
-      <Hero id="contact" className="mt-10" title="Contact Us" subtitle="Get in touch with our team for any inquiries" />
+      <Hero id="contact" className="mt-1 " title="Contact Us" subtitle="Get in touch with our team for any inquiries" />
 
-      <section className="py-24">
+      <section className="py-10">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Contact Information */}

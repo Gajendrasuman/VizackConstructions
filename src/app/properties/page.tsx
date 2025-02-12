@@ -60,7 +60,7 @@ export default function Properties() {
       />
 
       {/* Property Types */}
-      <section className="py-24">
+      <section className="py-3">
         <div className="container mx-auto px-4 shadow-md py-16">
           <div className="grid gap-16">
             {propertyTypes.map((type, index) => (

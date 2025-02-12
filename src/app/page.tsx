@@ -8,6 +8,7 @@ import Hero from "../components/Hero"
 import ServiceCard from "../components/ServiceCard"
 import { services } from "./services/page"
 import { Teko } from "next/font/google"
+import { RoughNotation } from "react-rough-notation"
 
 const kanit = Teko({
   weight: ["700"],
@@ -124,8 +125,8 @@ export default function Home() {
       <section className="py-24 shd my-8 ">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className={"text-3xl font-bold mb-4 text-orange-500 " + kanit.className}>Why Choose Us</h2>
-            <p className="text-muted-foreground">
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 " + kanit.className}><RoughNotation type="underline" show={true}>Why Choose Us</RoughNotation></h2>
+            <p className="text-black font-semibold">
               We deliver excellence through our core values and commitment to quality
             </p>
           </div>

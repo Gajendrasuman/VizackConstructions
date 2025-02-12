@@ -1,6 +1,6 @@
 import Hero from "../../components/Hero"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Users, Clock, DollarSign, Leaf, CheckCircle2 } from "lucide-react"
+import { Users, Clock, IndianRupee, Leaf, CheckCircle2 } from "lucide-react"
 import { Teko } from "next/font/google"
 import { RoughNotation } from "react-rough-notation"
 const kanit = Teko({
@@ -21,7 +21,7 @@ const values = [
     description: "We understand the value of time and are committed to completing projects on schedule.",
   },
   {
-    icon: DollarSign,
+    icon: IndianRupee,
     title: "Budget-Friendly Solutions",
     description: "We offer transparent pricing and tailor-made solutions to fit your budget.",
   },

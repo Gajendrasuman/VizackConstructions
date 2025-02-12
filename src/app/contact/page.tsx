@@ -8,6 +8,9 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import Link from "next/link"
 
 export default function Contact() {
+  const handleSubmit = async () => {
+    
+  }
   return (
     <div>
 
@@ -187,7 +190,7 @@ export default function Contact() {
                 <CardDescription>Fill out the form below and we'll get back to you as soon as possible</CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="firstName">First name</Label>

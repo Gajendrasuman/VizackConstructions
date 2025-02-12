@@ -12,7 +12,7 @@ const HoverButton = ({ text, href }: HoverButtonProps) => {
   return (
     <button onClick={() => router.push(href)} className="group relative h-12 w-48 overflow-hidden rounded bg-white text-lg shadow-xl">
         {/* Expanding background animation */}
-        <div className="absolute left-0 top-0 h-full w-0 bg-gray-900 transition-all duration-300 ease-out group-hover:w-full">
+        <div className="absolute left-0 top-0 h-full w-0 bg-orange-500 transition-all duration-300 ease-out group-hover:w-full">
 
         </div>
         

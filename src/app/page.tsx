@@ -102,7 +102,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className={"text-3xl text-orange-500 mb-4 " + kanit.className}>
-              Our Services</h2>
+            Our Services</h2>
             <p className="text-black">
               Comprehensive construction and property solutions tailored to your needs
             </p>

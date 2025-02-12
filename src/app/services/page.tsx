@@ -2,13 +2,6 @@ import Hero from "../components/Hero";
 import Link from "next/link";
 import ServiceCard from "../components/ServiceCard";
 import FeatureCard from "../components/FeatureCard";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
 // export const services = [
 //   {
 //     imageSrc: "/images/photo (1).jpg",
@@ -277,17 +270,19 @@ Contact us today, and let’s create something extraordinary together!"
       />
 
       <div className="py-24">
-        <div className="container mx-auto px-4 bg-white">
+        <div className="container mx-auto px-4 py-8 bg-white">
           <div className="grid gap-24">
             {services.map((service, index) => (
               <div
                 key={index}
                 className="grid md:grid-cols-2 gap-8 items-start"
               >
-                <Link href={"/services/" + service.title.toLowerCase()} passHref>
+                <Link href={"/services/" + service.title.toLowerCase()} target="_blank" passHref>
                   <ServiceCard {...service} />
                 </Link>
-                <FeatureCard features={service.features}></FeatureCard>
+                <Link href={"/services/" + service.title.toLowerCase()} target="_blank" passHref>
+                  <FeatureCard features={service.features}></FeatureCard>
+                </Link>
               </div>
             ))}
           </div>

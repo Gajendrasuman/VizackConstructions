@@ -2,33 +2,17 @@
 import Link from "next/link"
 import HoverButton from "./components/HoverButton"
 import {Typewriter} from "react-simple-typewriter"
-import { Kanit, Jura, Karantina } from "next/font/google"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Hero from "./components/Hero"
 import ServiceCard from "./components/ServiceCard"
 import { services } from "./services/page"
-import { Montserrat, Oswald, Teko, } from "next/font/google"
-import { Quicksand } from 'next/font/google'
-
-const quicksand = Quicksand({ subsets: ['latin'], weight: ["300", "400", "500", "600", "700"] });
-
+import { Teko } from "next/font/google"
 
 const kanit = Teko({
   weight: ["700"],
   subsets: ["latin"]
 })
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  display: "swap",
-})
-
-const oswald = Oswald({
-  subsets: ["latin"],
-  display: "swap",
-})
-
 
 const values = [
   {
@@ -98,10 +82,10 @@ export default function Home() {
               <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-muted-foreground hover:text-white transition-colors">
                 <HoverButton text="Get Started" href="/contact"></HoverButton>
               </Button>
-              <Button asChild size="lg" className="hover:bg-secondary hover:text-secondary-foreground bg-muted-foreground text-white transition-colors">
+              {/* <Button asChild size="lg" className="hover:bg-secondary hover:text-secondary-foreground bg-muted-foreground text-white transition-colors">
               <HoverButton text="Our Services" href="/services"></HoverButton>
 
-              </Button>
+              </Button> */}
             </div>
             {/* <iframe width="873" height="491" src="https://www.youtube.com/embed/fIr3iKTMRmo" title="Construction Company Profile - After Effects Template" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
             {/* <video src="https://youtu.be/fIr3iKTMRmo" controls autoPlay loop muted className="w-full max-w-3xl mx-auto">
@@ -126,9 +110,9 @@ export default function Home() {
          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {services.map((service, index) => (
-        <Link key={index} href={`/services/${service.title.toLowerCase()}`} passHref>
+        <Link key={index} href={`/services/${service.title.toLowerCase()}`} target="_blank" passHref>
             <div className="cursor-pointer">
-                <ServiceCard imageSrc={service.imageSrc} title={service.title} description={service.description} />
+                <ServiceCard key={index} imageSrc={service.imageSrc} title={service.title} description={service.description} />
             </div>
         </Link>
     ))}
@@ -149,7 +133,7 @@ export default function Home() {
   {values.map((value, index) => (
     <Card 
       key={index} 
-      className="flex flex-col items-center justify-between p-6 border border-orange-500 bg-white shadow-lg rounded-2xl transition-transform hover:scale-105"
+      className="flex flex-col items-center justify-between p-6 bg-gradient-to-b from-[#EBE7E1] hover:from-white hover:to-white to-white shadow-lg rounded-2xl transition-transform md:hover:scale-105"
     >
       <CardHeader className="flex flex-col items-center">
         <img src={value.imageSrc} className="w-20 h-20 mx-auto mb-4" alt={value.title} />

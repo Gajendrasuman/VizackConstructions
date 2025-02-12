@@ -109,7 +109,7 @@ export default function About() {
         </div>
       </section>
       {/* Process Section */}
-      <section className="py-24">
+      <section id="process" className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className={"text-3xl font-bold mb-4 text-orange-500 "+kanit.className}>Our Process</h2>
@@ -135,9 +135,7 @@ export default function About() {
         </div>
       </section>
       {/* Sustainability Section */}
-      ```tsx file="app/about/page.tsx" continued
-      {/* Sustainability Section */}
-      <section className="py-24 bg-orange-500 rounded-lg max-w-3xl mx-auto text-secondary-foreground">
+      <section id="sustainability" className="py-24 bg-orange-500 rounded-lg max-w-3xl mx-auto text-secondary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Our Commitment to Sustainability</h2>

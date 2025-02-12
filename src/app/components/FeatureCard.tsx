@@ -6,7 +6,7 @@ interface FeatureCardProps {
 
 export default function FeatureCard({ features }: FeatureCardProps) {
   return (
-    <Card className="bg-white shadow-lg rounded-2xl border border-orange-500">
+    <Card className="bg-white shadow-lg shadow-black/25 rounded-2xl ">
       <CardHeader>
         <CardTitle className="text-orange-500 uppercase tracking-wider font-bold">
           Features & Benefits
@@ -19,7 +19,7 @@ export default function FeatureCard({ features }: FeatureCardProps) {
               <span className="text-orange-500">•</span>
               <span className="flex flex-col font-bold tracking-wider uppercase">
                 {key}
-                <span className="text-orange-300 font-normal tracking-normal lowercase first-letter:uppercase">
+                <span className="text-gray-500 font-normal tracking-normal lowercase first-letter:uppercase">
                   {value}
                 </span>
               </span>

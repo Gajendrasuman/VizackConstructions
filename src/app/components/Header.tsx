@@ -12,9 +12,10 @@ export const imgLoader = ({ src, width, quality }: { src: string, width: number,
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
+  { name: "Maintenance Contracts", href: "/maintenance" },
   { name: "Properties", href: "/properties" },
   { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact#contact" },
+  // { name: "Contact", href: "/contact#contact" },
 ]
 
 export default function Header() {
@@ -23,7 +24,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-lg">
       <nav className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center">
             <Image
               src={"/logo/t_logo.png"}
@@ -36,9 +37,9 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center space-x-8">
+          <ul className="hidden md:flex items-center space-x-8 max-lg:space-x-4">
             {navigation.map((item) => (
-              <li key={item.name}>
+              <li key={item.name} className="w-max">
                 <Link href={item.href} className="text-sm font-medium hover:text-orange-500 transition-colors text-black">
                   {item.name}
                 </Link>
@@ -62,7 +63,8 @@ export default function Header() {
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="bg-gray-700 w-[300px] sm:w-[400px]">
+              <SheetContent side="right" className="bg-white text-black
+               w-[300px] sm:w-[400px]">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between pb-6">
                     <Link href="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
@@ -74,10 +76,10 @@ export default function Header() {
                         loader={imgLoader}
                         className="w-12 h-12 object-center rounded-full scale-105"
                       />
-                      <span className="text-xl font-bold text-white">ViZack Enterprises</span>
+                      <span className="text-xl font-bold text-[#3A3938]">ViZack Enterprises</span>
                     </Link>
-                    <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
-                      <X className="h-6 w-6 text-white" />
+                    <Button variant="ghost" className="shadow-md" size="icon" onClick={() => setIsOpen(false)}>
+                      <X className="h-6 w-6 text-[#3A3938]" />
                       <span className="sr-only">Close menu</span>
                     </Button>
                   </div>
@@ -87,7 +89,7 @@ export default function Header() {
                         <li key={item.name}>
                           <Link
                             href={item.href}
-                            className="text-lg font-medium text-white hover:text-orange-400 transition-colors"
+                            className="text-lg font-medium text-[#3A3938] hover:text-secondary transition-colors"
                             onClick={() => setIsOpen(false)}
                           >
                             {item.name}
@@ -96,7 +98,7 @@ export default function Header() {
                       ))}
                     </ul>
                   </nav>
-                  <Button asChild className="mt-6 bg-orange-500 text-secondary-foreground hover:bg-secondary/90">
+                  <Button asChild className="mt-6 bg-secondary text-secondary-foreground hover:bg-secondary/90">
                     <Link href="/contact" onClick={() => setIsOpen(false)}>
                       Contact Us
                     </Link>

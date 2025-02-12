@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export const imgLoader = ({ src, width, quality }: { src: string, width: number, quality?: number }) => `${src}?w=${width}&q=${quality || 75}`
@@ -12,43 +12,19 @@ export const imgLoader = ({ src, width, quality }: { src: string, width: number,
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
+  { name: "Maintenance Contracts", href: "/maintenance" },
   { name: "Properties", href: "/properties" },
   { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact#contact" },
+  // { name: "Contact", href: "/contact#contact" },
 ]
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const navbarClasses = `sticky top-0 z-50  ${
-    isScrolled
-      ? "backdrop-filter backdrop-blur supports-[backdrop-filter]:bg-[#0F1729]/5"
-      : "bg-transparent"
-  } transition-all duration-300`;
-
 
   return (
-    <header className={navbarClasses}>
-
-      <nav className="container mx-auto px-4 py-2">
-        <div className="flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-white shadow-lg">
+      <nav className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center">
             <Image
               src={"/logo/t_logo.png"}
@@ -56,15 +32,14 @@ export default function Header() {
               height={50}
               alt="logo"
               loader={imgLoader}
-              
             />
-            <span className="text-lg text-black font-semibold">ViZack Enterprises</span>
+            <span className="text-lg text-black">ViZack Enterprises</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center space-x-8">
+          <ul className="hidden md:flex items-center space-x-8 max-lg:space-x-4">
             {navigation.map((item) => (
-              <li key={item.name}>
+              <li key={item.name} className="w-max">
                 <Link href={item.href} className="text-sm font-medium hover:text-orange-500 transition-colors text-black">
                   {item.name}
                 </Link>
@@ -75,7 +50,7 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <Button
               asChild
-              className="hidden md:inline-flex bg-orange-500 text-secondary-foreground hover:bg-muted transition-colors hover:text-white "
+              className="hidden md:inline-flex bg-orange-500 text-secondary-foreground hover:bg-muted transition-colors hover:text-white"
             >
               <Link href="/contact#contact">Contact Us</Link>
             </Button>
@@ -83,28 +58,28 @@ export default function Header() {
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" className="md:hidden" size="icon">
-                  <Menu className="h-6 w-6" color="black"/>
+                <Button variant="ghost" className="md:hidden text-black" size="icon">
+                  <Menu className="h-6 w-6" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="bg-gray-700 w-[300px] sm:w-[400px]">
-                <div className="flex flex-col h-full ">
+              <SheetContent side="right" className="bg-white text-black
+               w-[300px] sm:w-[400px]">
+                <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between pb-6">
                     <Link href="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
-                      {/* <Building className="h-6 w-6 text-secondary" />  */}
-                       <Image
-                                          src={"/logo/logo.png"}
-                                          width={50}
-                                          height={50}
-                                          alt="logo"
-                                        loader={imgLoader}
-                                        className="w-12 h-12 object-center rounded-full scale-105"
-                                        />
-                      <span className="text-xl font-bold">ViZack Enterprises</span>
+                      <Image
+                        src={"/logo/logo.png"}
+                        width={50}
+                        height={50}
+                        alt="logo"
+                        loader={imgLoader}
+                        className="w-12 h-12 object-center rounded-full scale-105"
+                      />
+                      <span className="text-xl font-bold text-[#3A3938]">ViZack Enterprises</span>
                     </Link>
-                    <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
-                      <X className="h-6 w-6" />
+                    <Button variant="ghost" className="shadow-md" size="icon" onClick={() => setIsOpen(false)}>
+                      <X className="h-6 w-6 text-[#3A3938]" />
                       <span className="sr-only">Close menu</span>
                     </Button>
                   </div>
@@ -114,7 +89,7 @@ export default function Header() {
                         <li key={item.name}>
                           <Link
                             href={item.href}
-                            className="text-lg font-medium hover:text-secondary transition-colors"
+                            className="text-lg font-medium text-[#3A3938] hover:text-secondary transition-colors"
                             onClick={() => setIsOpen(false)}
                           >
                             {item.name}
@@ -123,7 +98,7 @@ export default function Header() {
                       ))}
                     </ul>
                   </nav>
-                  <Button asChild className="mt-6 bg-orange-500 text-secondary-foreground hover:bg-secondary/90">
+                  <Button asChild className="mt-6 bg-secondary text-secondary-foreground hover:bg-secondary/90">
                     <Link href="/contact" onClick={() => setIsOpen(false)}>
                       Contact Us
                     </Link>

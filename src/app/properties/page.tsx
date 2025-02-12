@@ -1,10 +1,13 @@
-import Hero from "../../components/Hero"
+import Hero from "../components/Hero"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Building, Home, Factory } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Teko } from "next/font/google"
-import { teko } from "@/fonts/font"
+const kanit = Teko({
+  weight: ["700"],
+  subsets: ["latin"]
+})
 
 
 
@@ -110,7 +113,7 @@ export default function Properties() {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className={"text-3xl font-bold mb-4 text-orange-500 "+teko.className}>Why Choose Us for Property Services?</h2>
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 "+kanit.className}>Why Choose Us for Property Services?</h2>
             <p className="text-muted-foreground">We make property hunting and transactions smooth and hassle-free</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

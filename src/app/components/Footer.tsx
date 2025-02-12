@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { imgLoader } from "./Header"
 import Image from "next/image"
+import { Download } from "lucide-react"
 
 const navigation = {
   main: [
@@ -11,6 +12,7 @@ const navigation = {
     { name: "Contact", href: "/contact" },
   ],
   services: [
+    { name: "Maintenance Contracts", href: "/maintenance" },
     { name: "Planning and Design", href: "/services/planning and design" },
     { name: "Construction Services", href: "/services/construction services" },
     { name: "Interior Solutions", href: "/services/interior solutions" },
@@ -23,12 +25,12 @@ const navigation = {
   ],
   company: [
     { name: "About Us", href: "/about" },
-    { name: "Our Process", href: "/about" },
-    { name: "Sustainability", href: "/about" },
+    { name: "Our Process", href: "/about#process" },
+    { name: "Sustainability", href: "/about#sustainability" },
     { name: "Contact Us", href: "/contact" },
-    { name: "Intern With Us", href: "https://forms.gle/au6P4oBjpR6Zswq17" },
-    { name: "Career Options", href: "https://forms.gle/rvW3tUsGgnY56HTY8" },
-    { name: "Customer Support", href: "http://wa.me/+919826258659" },
+    { name: "Intern With Us", href: "https://forms.gle/au6P4oBjpR6Zswq17", download: true },
+    { name: "Career Options", href: "https://forms.gle/rvW3tUsGgnY56HTY8", download: true },
+    { name: "Customer Support", href: "tel:+919826258659" },
   ],
   legals: [
     { name: "Terms of Service", href: "https://docs.google.com/document/d/e/2PACX-1vSM1HbylMnlDx_xcDRx7qC5yui2Dw3zC2hPMnkl8on7sVDCV17SXHCFMpCrenccAiUT6mQCKcdv9hka/pub" },
@@ -41,7 +43,7 @@ export default function Footer() {
   return (
     <>
       <svg className="w-full mt-10 relative lg:h-24 h-12 " viewBox="10 0 750 30">
-        <path d="M0 50 Q 100 30 400 70 T 800 50 " stroke="#222F44" fill="none" stroke-width="100" />
+        <path d="M0 50 Q 100 30 400 70 T 800 50 " stroke="#222F44" fill="none" strokeWidth="100" />
       </svg>
       <footer className="bg-muted">
         
@@ -114,7 +116,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 {navigation.company.map((item) => (
                   <li key={item.name}>
-                    <Link href={item.href} className="text-muted-foreground hover:text-secondary transition-colors">
+                    <Link href={item.href} {...item?.download && { download: true }} className="text-muted-foreground hover:text-secondary transition-colors">
                       {item.name}
                     </Link>
                   </li>

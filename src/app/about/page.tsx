@@ -1,8 +1,11 @@
-import Hero from "../../components/Hero"
+import Hero from "../components/Hero"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Users, Clock, DollarSign, Leaf, CheckCircle2 } from "lucide-react"
-import { teko } from "@/fonts/font"
-
+import { Teko } from "next/font/google"
+const kanit = Teko({
+  weight: ["700"],
+  subsets: ["latin"]
+})
 
 
 const values = [
@@ -59,7 +62,7 @@ export default function About() {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className={"text-3xl font-bold mb-4 text-orange-500 text-center "+teko.className}>Our Story</h2>
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 text-center "+kanit.className}>Our Story</h2>
             <div className="flex flex-col gap-4 text-muted prose-lg dark:prose-invert mx-auto">
               <p>
                 At <b>ViZack Enterprises</b>, we don&apos;t just build structures—we bring visions to life. Our approach goes beyond bricks and mortar; we craft experiences, shape environments, and redefine spaces with creativity and precision.
@@ -87,18 +90,18 @@ export default function About() {
       <section className="py-24 ">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className={"text-3xl font-bold mb-4 text-orange-500 "+teko.className}>Our Values</h2>
-            <p className="text-muted-foreground">The principles that guide our work and relationships</p>
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 "+kanit.className}>Our Values</h2>
+            <p className="text-gray-800">The principles that guide our work and relationships</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card key={index}>
+              <Card className="bg-white" key={index}>
                 <CardHeader>
-                  <value.icon className="w-12 h-12 mb-4 text-secondary" />
-                  <CardTitle>{value.title}</CardTitle>
+                  <value.icon className="w-12 h-12 mb-4 text-orange-500" />
+                  <CardTitle className="text-orange-500">{value.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription>{value.description}</CardDescription>
+                  <CardDescription className="text-black">{value.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -106,10 +109,10 @@ export default function About() {
         </div>
       </section>
       {/* Process Section */}
-      <section className="py-24">
+      <section id="process" className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className={"text-3xl font-bold mb-4 text-orange-500 "+teko.className}>Our Process</h2>
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 "+kanit.className}>Our Process</h2>
             <p className="text-muted-foreground">How we bring your vision to life</p>
           </div>
           <div className="grid gap-8">
@@ -132,9 +135,7 @@ export default function About() {
         </div>
       </section>
       {/* Sustainability Section */}
-      ```tsx file="app/about/page.tsx" continued
-      {/* Sustainability Section */}
-      <section className="py-24 bg-orange-500 rounded-lg max-w-3xl mx-auto text-secondary-foreground">
+      <section id="sustainability" className="py-24 bg-orange-500 rounded-lg max-w-3xl mx-auto text-secondary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Our Commitment to Sustainability</h2>
@@ -143,24 +144,24 @@ export default function About() {
               incorporating energy-efficient solutions, we ensure our projects have a minimal environmental impact.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="bg-secondary-foreground text-secondary">
+              <Card className="bg-gray-200 text-orange-500">
                 <CardHeader>
-                  <CheckCircle2 className="w-12 h-12 mb-4 text-secondary" />
+                  <CheckCircle2 className="w-12 h-12 mb-4 text-orange-500 txt" />
                   <CardTitle>Sustainable Materials</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-secondary/80">
+                  <CardDescription className="text-black">
                     We prioritize eco-friendly and locally sourced materials in our construction projects.
                   </CardDescription>
                 </CardContent>
               </Card>
-              <Card className="bg-secondary-foreground text-secondary">
+              <Card className="bg-gray-200 text-orange-500">
                 <CardHeader>
-                  <Leaf className="w-12 h-12 mb-4 text-secondary" />
-                  <CardTitle>Energy Efficiency</CardTitle>
+                  <Leaf className="w-12 h-12 mb-4 text-orange-500" />
+                  <CardTitle >Energy Efficiency</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-secondary/80">
+                  <CardDescription className="text-black">
                     Our designs incorporate energy-saving features and renewable energy solutions.
                   </CardDescription>
                 </CardContent>

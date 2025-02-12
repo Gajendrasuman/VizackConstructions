@@ -7,8 +7,13 @@ interface HeroProps {
     id?: string;
 }
 
-import { montserrat } from "@/fonts/font";
+import { Teko } from "next/font/google"
 
+const montserrat = Teko({
+    subsets: ["latin"],
+    display: "swap",
+    weight: ["700"]
+})
 
 export default function Hero({ title, subtitle, className, id }: HeroProps) {
     return (

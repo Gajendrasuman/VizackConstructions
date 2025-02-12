@@ -1,6 +1,5 @@
 import Link from "next/link"
 import HoverButton from "../components/HoverButton"
-import { Kanit, Jura, Karantina } from "next/font/google"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {
@@ -12,23 +11,7 @@ import {
 import ServiceCard from "../components/ServiceCard"
 import { services } from "./services/page"
 import { Montserrat, Oswald, Poppins, Bebas_Neue, Raleway, Teko, Bungee, Anton } from "next/font/google"
-import { kanit } from "@/fonts/font"
-
-// const kanit = Teko({
-//   weight: ["700"],
-//   subsets: ["latin"]
-// })
-
-// const montserrat = Montserrat({
-//   subsets: ["latin"],
-//   display: "swap",
-// })
-
-// const oswald = Oswald({
-//   subsets: ["latin"],
-//   display: "swap",
-// })
-
+import { teko } from "@/fonts/font"
 
 const values = [
   {
@@ -60,13 +43,13 @@ export default function Home() {
       <section className="bg-[#EBE7E1] tracking-wider relative py-24 overflow-hidden hero-pattern">
         <div className="container mx-auto px-4">
           <div className=" max-w-4xl mx-auto text-center">
-            <h1 className={"text-5xl text-black md:text-6xl lg:text-7xl font-bold mb-6 " + kanit.className}>
+            <h1 className={"text-5xl text-black md:text-6xl lg:text-7xl font-bold mb-6 " + teko.className}>
               Welcome to  <span className="text-orange-600 "> ViZack </span> Enterprises and Construction
             </h1>
             <p className="text-xl text-black max-w-3xl mx-auto mb-8">
               We are a full-service construction company dedicated to transforming your vision into reality.Whether you need a small renovation, a large-scale commercial project, or anything in between, we provide end-to-end solutions for all your construction needs, including both interior and exterior services.
             </p>
-            <p className={"text-xl text-black mb-8 bg-orange-500 max-w-3xl mx-auto rounded-lg px-4 py-4 "+kanit.className}>
+            <p className={"text-xl text-black mb-8 bg-orange-500 max-w-3xl mx-auto rounded-lg px-4 py-4 "+teko.className}>
               Your Trusted Partner for Comprehensive Construction Services
             </p>
             <div className="mb-16 flex flex-col sm:flex-row justify-center gap-4">
@@ -101,7 +84,7 @@ export default function Home() {
       <section className="py-2 bg-[#EBE7E1]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className={"text-3xl text-orange-500 mb-4 " + kanit.className}>
+            <h2 className={"text-3xl text-orange-500 mb-4 " + teko.className}>
               Our Services</h2>
             <p className="text-black">
               Comprehensive construction and property solutions tailored to your needs
@@ -121,7 +104,7 @@ export default function Home() {
       <section className="py-24 shd my-8 ">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className={"text-3xl font-bold mb-4 text-orange-500 " + kanit.className}>Why Choose Us</h2>
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 " + teko.className}>Why Choose Us</h2>
             <p className="text-muted-foreground">
               We deliver excellence through our core values and commitment to quality
             </p>

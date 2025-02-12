@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-// import { cn } from "@/lib/utils"
 
 export const imgLoader = ({ src, width, quality }: { src: string, width: number, quality?: number }) => `${src}?w=${width}&q=${quality || 75}`
 
@@ -85,7 +84,7 @@ export default function Header() {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" className="md:hidden" size="icon">
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-6 w-6" color="black"/>
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>

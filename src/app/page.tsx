@@ -71,7 +71,7 @@ export default function Home() {
                   </span>
                 </h1>
             <h1 className={"text-3xl text-black md:text-4xl lg:text-5xl font-bold mb-6 " + kanit.className}>
-              Your  <span className="text-orange-600 "> One Stop </span> For All of Your Architectural Needs.
+              Your  <span className="text-orange-600 "><RoughNotation show={true} animationDuration={300} type="circle"> One Stop </RoughNotation></span> For All of Your Architectural Needs.
             </h1>
             <p className="text-xl text-quicksand text-black max-w-3xl mx-auto mb-8">
               We are a full-service construction company dedicated to transforming your vision into reality.Whether you need a small renovation, a large-scale commercial project, or anything in between, we provide end-to-end solutions for all your construction needs, including both interior and exterior services.
@@ -102,7 +102,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className={"text-3xl text-orange-500 mb-4 " + kanit.className}>
-            Our Services</h2>
+              <RoughNotation type="underline" animationDuration={300} show={true}>
+            Our Services
+            </RoughNotation>
+            </h2>
             <p className="text-black">
               Comprehensive construction and property solutions tailored to your needs
             </p>

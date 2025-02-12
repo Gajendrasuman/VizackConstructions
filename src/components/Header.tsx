@@ -3,8 +3,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Building, Menu, X } from "lucide-react"
-import { useState } from "react"
+import { Menu, X } from "lucide-react"
+import { useState, useEffect } from "react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 // import { cn } from "@/lib/utils"
 
@@ -20,11 +20,35 @@ const navigation = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const navbarClasses = `sticky top-0 z-50  ${
+    isScrolled
+      ? "backdrop-filter backdrop-blur supports-[backdrop-filter]:bg-[#0F1729]/5"
+      : "bg-transparent"
+  } transition-all duration-300`;
+
 
   return (
-    <header className="sticky top-0 z-50 backdrop-filter backdrop-blur supports-[backdrop-filter]:bg-[#0F1729]/5">
+    <header className={navbarClasses}>
 
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image
@@ -35,7 +59,7 @@ export default function Header() {
               loader={imgLoader}
               
             />
-            <span className="text-lg text-black">ViZack Enterprises</span>
+            <span className="text-lg text-black font-semibold">ViZack Enterprises</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -114,4 +138,3 @@ export default function Header() {
     </header>
   )
 }
-

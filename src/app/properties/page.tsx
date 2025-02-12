@@ -1,13 +1,14 @@
-import Hero from "../components/Hero"
+import Hero from "../../components/Hero"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Building, Home, Factory } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Teko } from "next/font/google"
-const kanit = Teko({
-  weight: ["700"],
-  subsets: ["latin"]
-})
+import { kanit } from "@/fonts/font"
+// const kanit = Teko({
+//   weight: ["700"],
+//   subsets: ["latin"]
+// })
 
 
 

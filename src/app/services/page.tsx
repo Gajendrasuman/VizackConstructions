@@ -1,6 +1,6 @@
-import Hero from "../components/Hero";
+import Hero from "../../components/Hero";
 import Link from "next/link";
-import ServiceCard from "../components/ServiceCard";
+import ServiceCard from "../../components/ServiceCard";
 import {
   PencilRuler,
   Drill,

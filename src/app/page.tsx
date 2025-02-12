@@ -1,5 +1,5 @@
 import Link from "next/link"
-import HoverButton from "./components/HoverButton"
+import HoverButton from "../components/HoverButton"
 import { Kanit, Jura, Karantina } from "next/font/google"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -9,24 +9,25 @@ import {
   DollarSign,
   Leaf
 } from "lucide-react"
-import ServiceCard from "./components/ServiceCard"
+import ServiceCard from "../components/ServiceCard"
 import { services } from "./services/page"
 import { Montserrat, Oswald, Poppins, Bebas_Neue, Raleway, Teko, Bungee, Anton } from "next/font/google"
+import { kanit } from "@/fonts/font"
 
-const kanit = Teko({
-  weight: ["700"],
-  subsets: ["latin"]
-})
+// const kanit = Teko({
+//   weight: ["700"],
+//   subsets: ["latin"]
+// })
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  display: "swap",
-})
+// const montserrat = Montserrat({
+//   subsets: ["latin"],
+//   display: "swap",
+// })
 
-const oswald = Oswald({
-  subsets: ["latin"],
-  display: "swap",
-})
+// const oswald = Oswald({
+//   subsets: ["latin"],
+//   display: "swap",
+// })
 
 
 const values = [

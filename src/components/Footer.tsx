@@ -43,9 +43,9 @@ export default function Footer() {
   return (
     <>
       <svg className="w-full mt-10 relative lg:h-24 h-12 " viewBox="10 0 750 30">
-        <path d="M0 50 Q 100 30 400 70 T 800 50 " stroke="#222F44" fill="none" strokeWidth="100" />
+        <path d="M0 50 Q 100 30 400 70 T 800 50 " stroke="#0E1728" fill="none" strokeWidth="100" />
       </svg>
-      <footer className="bg-muted">
+      <footer className="bg-[#0E1728]">
         
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">

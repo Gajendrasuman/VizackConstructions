@@ -15,6 +15,8 @@ import ServiceCard from "../components/ServiceCard";
 import { services } from "./services/page";
 import { Teko } from "next/font/google";
 import { RoughNotation } from "react-rough-notation";
+import { imgLoader } from "@/components/Header";
+import Image from "next/image";
 
 const kanit = Teko({
   weight: ["700"],
@@ -23,25 +25,25 @@ const kanit = Teko({
 
 const values = [
   {
-    imageSrc: "/images/photo (1).jpg",
+    imageSrc: "https://img.freepik.com/free-vector/hand-drawn-flat-design-affiliate-marketing-illustration_23-2149347413.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
     title: "Client-Centric Approach",
     description:
       "We work closely with you to understand your needs and ensure every detail aligns with your vision.",
   },
   {
-    imageSrc: "/images/photo (2).jpg",
+    imageSrc: "https://img.freepik.com/premium-vector/hand-drawn-transport-logistics-illustration_23-2151515381.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
     title: "On-Time Delivery",
     description:
       "We understand the value of time and are committed to completing projects on schedule.",
   },
   {
-    imageSrc: "/images/photo (3).jpg",
+    imageSrc: "https://img.freepik.com/free-vector/piggy-bank-concept-illustration_114360-21415.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
     title: "Budget-Friendly",
     description:
       "We offer transparent pricing and tailor-made solutions to fit your budget requirements.",
   },
   {
-    imageSrc: "/images/photo (4).jpg",
+    imageSrc: "https://img.freepik.com/free-vector/renewable-energy-concept-illustration_114360-28103.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
     title: "Sustainability",
     description:
       "We are committed to environmentally-friendly construction practices and energy-efficient solutions.",
@@ -136,7 +138,7 @@ export default function Home() {
       <section className="py-2 bg-[#EBE7E1]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className={"text-3xl text-orange-500 mb-4 font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 "}>
+            <h2 className={"text-3xl text-orange-500 mb-4 font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 before:right-[28%] after:left-[28%]"}>
               <RoughNotation
                 type="underline"
                 animationDuration={300}
@@ -179,7 +181,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2
               className={
-                "text-3xl font-bold mb-4 text-orange-500 font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900"
+                "text-3xl font-bold mb-4 text-orange-500 font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 before:right-[25%] after:left-[25%]"
               }
             >
                 Why Choose Us
@@ -196,10 +198,13 @@ export default function Home() {
                 className="flex flex-col items-center justify-between p-6 bg-gradient-to-tr from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg rounded-2xl transition-transform md:hover:scale-105"
               >
                 <CardHeader className="flex flex-col items-center">
-                  <img
+                  <Image
                     src={value.imageSrc}
-                    className="size-64 aspect-video object-cover mix-blend-darken mx-auto mb-4"
+                    className="size-64 aspect-video object-contain mix-blend-darken mx-auto mb-4"
                     alt={value.title}
+                    width={256}
+                    height={256}
+                    loader={imgLoader}                    
                   />
                   <CardTitle className="text-orange-500 font-bold">
                     {value.title}

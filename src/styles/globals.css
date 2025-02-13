@@ -126,10 +126,10 @@
     background: black;
     z-index: 2;
     top: 50%;
-    right: 28%;
+    right: 30%;
 
   }
   &:after{
-    left: 28%;
+    left: 30%;
   }
 }

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import HoverButton from "./HoverButton"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
+import { imgLoader } from "./Header"
 
 interface ServiceCardProps {
     imageSrc: string
@@ -15,7 +16,7 @@ export default function ServiceCard({ imageSrc, title, description }: ServiceCar
             <CardHeader>
                 <div className="flex justify-center w-full">
                     <div className="relative  mb-4"> {/* Increased size */}
-                        <Image src={imageSrc} alt={title} width={250} height={250} className="w-96 aspect-video object-cover mix-blend-darken" />
+                        <Image src={imageSrc} alt={title} width={250} height={250} loader={imgLoader} className="w-96 aspect-video object-contain mix-blend-darken" />
                     </div>
                 </div>
                 <CardTitle className="text-xl font-semibold text-orange-500">{title}</CardTitle>

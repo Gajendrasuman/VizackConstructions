@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { imgLoader } from "./Header";
 
 interface FeatureCardProps {
   features: Record<string, string>;
@@ -9,7 +10,15 @@ interface FeatureCardProps {
 export default function FeatureCard({ features, image }: FeatureCardProps) {
   return (
     <Card className="bg-gradient-to-tl from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 rounded-2xl ">
-      <CardHeader>
+      <CardHeader className="flex flex-col items-center">
+        <Image
+          src={image}
+          width={10}
+          height={10}
+          alt={image}
+          loader={imgLoader}
+          className="object-contain w-1/3 mix-blend-darken "
+        />
         <CardTitle className="text-orange-500 uppercase tracking-wider font-bold">
           Features & Benefits
         </CardTitle>
@@ -28,14 +37,6 @@ export default function FeatureCard({ features, image }: FeatureCardProps) {
             </li>
           ))}
         </ul>
-
-        <Image
-          src={image}
-          width={150}
-          height={150}
-          alt={image}
-          className="object-contain w-1/2 mix-blend-darken "
-        />
       </CardContent>
     </Card>
   );

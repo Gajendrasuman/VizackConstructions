@@ -63,7 +63,7 @@ export default function About() {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className={"text-3xl font-bold mb-4 text-orange-500 text-center font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 "}>Our Story</h2>
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 text-center font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 before:right-[31%] after:left-[31%] "}>Our Story</h2>
             <div className="flex flex-col gap-4 text-muted prose-lg dark:prose-invert mx-auto">
               <p>
                 At <b>ViZack Enterprises</b>, we don&apos;t just build structures—we bring visions to life. Our approach goes beyond bricks and mortar; we craft experiences, shape environments, and redefine spaces with creativity and precision.
@@ -92,7 +92,7 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16 ">
             {/* <RoughNotation type="box" show={true} animationDelay={500}> */}
-            <h2 className={"text-3xl font-bold mb-4 text-orange-500 font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 "}>Our Values</h2>
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900  before:right-[29.5%] after:left-[29.5%]"}>Our Values</h2>
             {/* </RoughNotation> */}
             <p className="text-gray-800">The principles that guide our work and relationships</p>
           </div>
@@ -115,7 +115,7 @@ export default function About() {
       <section id="process" className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className={"text-3xl font-bold mb-4 text-orange-500 font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 "}>Our Process</h2>
+            <h2 className={"text-3xl font-bold mb-4 text-orange-500 font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 before:right-[28.5%] after:left-[28.5%]"}>Our Process</h2>
             <p className="text-muted-foreground">How we bring your vision to life</p>
           </div>
           <div className="grid gap-8">

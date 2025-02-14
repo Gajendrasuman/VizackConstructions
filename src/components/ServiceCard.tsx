@@ -1,16 +1,18 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import HoverButton from "./HoverButton"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
-import { imgLoader } from "./Header"
+import { imgLoader } from "@/utils/constants"
 
 interface ServiceCardProps {
     imageSrc: string
     title: string
     description: string
+    button?: boolean
 }
 
-export default function ServiceCard({ imageSrc, title, description }: ServiceCardProps) {
+export default function ServiceCard({ imageSrc, title, description, button = true }: ServiceCardProps) {
     return (
         <Card className="bg-gradient-to-tr from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 rounded-lg p-6 flex flex-col items-center text-center h-full">
             <CardHeader>
@@ -24,10 +26,11 @@ export default function ServiceCard({ imageSrc, title, description }: ServiceCar
             <CardContent className="flex-grow">
                 <CardDescription className="text-gray-700">{description}</CardDescription>
             </CardContent>
-            <Button asChild size="lg" className="hover:bg-secondary hover:text-secondary-foreground bg-muted-foreground text-white transition-colors">
-                <HoverButton text="Know More" href="/services"></HoverButton>
-
-            </Button>
+            {button && (
+                <Button asChild size="lg" className="hover:bg-secondary hover:text-secondary-foreground bg-muted-foreground text-white transition-colors">
+                    <HoverButton text="Know More" href="/services"></HoverButton>
+                </Button>
+            )}
         </Card>
     )
 }

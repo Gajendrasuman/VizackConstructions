@@ -1,10 +1,12 @@
 "use client"
 import { usePathname } from 'next/navigation'
-import { services } from '../page'
+import { services } from '@/utils/services'
 import Link from 'next/link'
 import { Kanit } from 'next/font/google'
 import { ChevronRight } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import Image from 'next/image'
+import { imgLoader } from '@/utils/constants'
 
 const kanit = Kanit({
     weight: ["400", "700"],
@@ -27,8 +29,10 @@ export default function Service() {
                     if (serv.title.toLowerCase() === service) {
                         return (
                             <>
-                                <header key={index} className='px-4 py-8'>
+                                <header key={index} className='px-4 py-8 flex flex-col items-center gap-10'>
                                     <h1 className={'text-3xl font-bold text-center ' + kanit.className}>{serv.title}</h1>
+
+                                    <Image src={serv.imageSrc} alt={serv.title} width={550} height={550} loader={imgLoader} className="w-[35rem] aspect-video object-contain mix-blend-darken" />
                                     
                                     <p className='text-muted text-center w-[60%] mx-auto py-4'>{serv.description}</p>
                                 </header>

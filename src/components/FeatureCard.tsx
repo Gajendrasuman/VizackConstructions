@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { imgLoader } from "./Header";
+import { imgLoader } from "@/utils/constants";
 
 interface FeatureCardProps {
   features: Record<string, string>;
-  image: string; // Defines features as key-value pairs
+  image: string;
 }
 
 export default function FeatureCard({ features, image }: FeatureCardProps) {

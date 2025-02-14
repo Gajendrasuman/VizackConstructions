@@ -10,45 +10,18 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Hero from "../components/Hero";
 import ServiceCard from "../components/ServiceCard";
-import { services } from "./services/page";
+import { services } from "@/utils/services";
 import { Teko } from "next/font/google";
 import { RoughNotation } from "react-rough-notation";
-import { imgLoader } from "@/components/Header";
+import { imgLoader } from "@/utils/constants";
 import Image from "next/image";
+import { whyChooseUs } from "@/utils/why-choose-us";
 
 const kanit = Teko({
   weight: ["700"],
   subsets: ["latin"],
 });
-
-const values = [
-  {
-    imageSrc: "https://img.freepik.com/free-vector/hand-drawn-flat-design-affiliate-marketing-illustration_23-2149347413.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
-    title: "Client-Centric Approach",
-    description:
-      "We work closely with you to understand your needs and ensure every detail aligns with your vision.",
-  },
-  {
-    imageSrc: "https://img.freepik.com/premium-vector/hand-drawn-transport-logistics-illustration_23-2151515381.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
-    title: "On-Time Delivery",
-    description:
-      "We understand the value of time and are committed to completing projects on schedule.",
-  },
-  {
-    imageSrc: "https://img.freepik.com/free-vector/piggy-bank-concept-illustration_114360-21415.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
-    title: "Budget-Friendly",
-    description:
-      "We offer transparent pricing and tailor-made solutions to fit your budget requirements.",
-  },
-  {
-    imageSrc: "https://img.freepik.com/free-vector/renewable-energy-concept-illustration_114360-28103.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
-    title: "Sustainability",
-    description:
-      "We are committed to environmentally-friendly construction practices and energy-efficient solutions.",
-  },
-];
 
 export default function Home() {
   return (
@@ -192,7 +165,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {values.map((value, index) => (
+            {whyChooseUs.map((value, index) => (
               <Card
                 key={index}
                 className="flex flex-col items-center justify-between p-6 bg-gradient-to-tr from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg rounded-2xl transition-transform md:hover:scale-105"

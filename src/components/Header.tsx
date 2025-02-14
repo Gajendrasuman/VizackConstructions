@@ -7,16 +7,7 @@ import { Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { usePathname } from "next/navigation"
-
-export const imgLoader = ({ src, width, quality }: { src: string, width: number, quality?: number }) => `${src}?w=${width}&q=${quality || 75}`
-
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "Properties", href: "/properties" },
-  { name: "About", href: "/about" },
-  // { name: "Contact", href: "/contact#contact" },
-]
+import { navigation, imgLoader } from "@/utils/constants"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)

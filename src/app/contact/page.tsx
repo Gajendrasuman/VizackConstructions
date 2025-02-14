@@ -1,3 +1,4 @@
+'use client'
 import Hero from "../../components/Hero"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -6,8 +7,48 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react"
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phonenumber: "",
+    message: "",
+    subject: "",
+  })
+  const [isLoading, setIsLoading] = useState(false)
+  const [sendSuccess, setSendSuccess] = useState(false)
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    // e.preventDefault();
+    setIsLoading(true);
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+      const data = await response.json();
+      setSendSuccess(true);
+      setIsLoading(false);
+    } catch (error) {
+      console.error(error);
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div>
 
@@ -78,28 +119,28 @@ export default function Contact() {
                 <CardDescription>Fill out the form below and we'll get back to you as soon as possible</CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-6">
+              <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="firstName">First name</Label>
-                      <Input id="firstName" placeholder="Enter your first name" />
+                      <Label htmlFor="firstName" >First name</Label>
+                      <Input id="firstName" name="firstname" onChange={handleChange} value={formData.firstname} placeholder="Enter your first name" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="lastName">Last name</Label>
-                      <Input id="lastName" placeholder="Enter your last name" />
+                      <Input id="lastName" name="lastname" onChange={handleChange} value={formData.lastname} placeholder="Enter your last name" />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="Enter your email" />
+                    <Input name="email" onChange={handleChange} value={formData.email} id="email" type="email" placeholder="Enter your email" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone</Label>
-                    <Input id="phone" type="tel" placeholder="Enter your phone number" />
+                    <Input name="phonenumber" onChange={handleChange} value={formData.phonenumber} id="phone" type="tel" placeholder="Enter your phone number" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" placeholder="What is this regarding?" />
+                    <Input name="subject" onChange={handleChange} value={formData.subject} id="subject" placeholder="What is this regarding?" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
@@ -107,10 +148,13 @@ export default function Contact() {
                       id="message"
                       placeholder="Tell us about your project or inquiry..."
                       className="min-h-[150px]"
+                      name="message"
+                      onChange={handleChange}
+                      value={formData.message}
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90">
-                    Send Message
+                  <Button  disabled={isLoading} onClick={handleSubmit} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90">
+                    {isLoading ? "Sending..." : sendSuccess ? "Message sent!" : "Send Message"}
                   </Button>
                 </form>
               </CardContent>

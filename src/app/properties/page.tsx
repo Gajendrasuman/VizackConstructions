@@ -38,7 +38,7 @@ export default function Properties() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-orange-500 text-orange-500-foreground">
+      <section className="py-24 md:w-fit md:px-24 md:mx-auto bg-orange-500 text-orange-500-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Find Your Perfect Property?</h2>
@@ -46,8 +46,8 @@ export default function Properties() {
             <Button
               asChild
               size="lg"
-              variant="outline"
-              className="bg-secondary-foreground text-orange-500 hover:bg-orange-500-foreground/90"
+              variant="secondary"
+              className="bg-white shadow-lg text-orange-500 hover:bg-orange-500-foreground/90"
             >
               <Link href="/contact">Contact Our Experts</Link>
             </Button>

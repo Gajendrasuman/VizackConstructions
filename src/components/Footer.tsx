@@ -1,7 +1,8 @@
+"use client"
 import Link from "next/link"
 import { imgLoader } from "@/utils/constants"
 import Image from "next/image"
-import { footetNavigation } from "@/utils/constants"
+import { footerNavigation } from "@/utils/constants"
 
 export default function Footer() {
   return (
@@ -10,7 +11,6 @@ export default function Footer() {
         <path d="M0 50 Q 100 30 400 70 T 800 50 " stroke="#0E1728" fill="none" strokeWidth="100" />
       </svg>
       <footer className="bg-[#0E1728]">
-        
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
             {/* Company Info */}
@@ -32,14 +32,15 @@ export default function Footer() {
               </p>
             </div>
 
-            {Object.keys(footetNavigation).map((key, index) => (
-              <div>
+            {Object.keys(footerNavigation).map((key, index) => (
+              <div key={index}>
                 <h3 className="font-semibold mb-4 capitalize">{key}</h3>
                 <ul className="space-y-2">
-                  {footetNavigation[key as keyof typeof footetNavigation].map((item) => (
+                  {footerNavigation[key as keyof typeof footerNavigation].map((item) => (
                     <li key={index}>
                       <Link href={item.href} className="text-muted-foreground hover:text-secondary transition-colors">
                         {item.name}
+
                       </Link>
                     </li>
                   ))}

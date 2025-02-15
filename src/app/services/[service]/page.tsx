@@ -40,16 +40,16 @@ export default function Service() {
                                 <section>
                                     <div className="mx-auto px-4">
                                         <div className="w-full flex flex-col items-center mx-auto text-center">
-                                            <h2 className="text-3xl font-bold mb-4">Features & Benefits</h2>
-                                            <p className="text-muted-foreground">The principles that guide our work and relationships</p>
+                                            <h2 className="text-3xl font-bold mb-4 text-orange-500">Features & Benefits</h2>
+                                            <p className="text-muted">The principles that guide our work and relationships</p>
                                             <div className="w-[80%] justify-items-center py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                                                 {Object.entries(services[index].features).map(([key, value], index) => (
                                                     <Card key={index} className="text-center bg-gradient-to-tl from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 text-muted">
-                                                        <CardHeader>
+                                                        <CardHeader className='text-orange-500'>
                                                             <CardTitle>{key}</CardTitle>
                                                         </CardHeader>
-                                                        <CardContent>
-                                                            <CardDescription>{value}</CardDescription>
+                                                        <CardContent >
+                                                            <CardDescription className='text-muted'>{value}</CardDescription>
                                                         </CardContent>
                                                     </Card>
                                                 ))}

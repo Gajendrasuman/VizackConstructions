@@ -9,7 +9,7 @@ export const navigation = [
 export const imgLoader = ({ src, width, quality }: { src: string, width: number, quality?: number }) => `${src}?w=${width}&q=${quality || 75}`
 
 
-export const footetNavigation = {
+export const footerNavigation = {
     services: [
         { name: "Maintenance Contracts", href: "/services#maintenance" },
         { name: "Planning and Design", href: "/services/planning and design" },

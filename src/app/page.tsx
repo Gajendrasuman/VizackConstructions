@@ -11,7 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import ServiceCard from "../components/ServiceCard";
-import { services } from "@/utils/services";
+import { homeServices } from "@/utils/services";
 import { Teko } from "next/font/google";
 import { RoughNotation } from "react-rough-notation";
 import { imgLoader } from "@/utils/constants";
@@ -129,14 +129,15 @@ export default function Home() {
           {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
            */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {homeServices.map((service, index) => (
+              
               <Link
                 key={index}
-                href={`/services/${service.title.toLowerCase()}`}
+                href={index === homeServices.length - 1 ? "/services#maintenance"  : `/services/${service.title.toLowerCase()}`}
                 target="_blank"
                 passHref
               >
-                <div className="cursor-pointer h-[49rem] ">
+                <div className="cursor-pointer h-[32rem] ">
                   <ServiceCard
                     key={index}
                     imageSrc={service.imageSrc}
@@ -209,7 +210,6 @@ export default function Home() {
             </p>
             <Button asChild size="lg" variant="outline">
               <HoverButton
-                
                 text="Get in Touch"
                 href="/contact#contact"
               ></HoverButton>

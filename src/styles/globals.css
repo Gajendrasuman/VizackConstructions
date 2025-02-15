@@ -139,7 +139,7 @@ b{
 }
 .hoverButton{
   &:before{
-    transition: all 800ms ease-in-out;
+    transition: all 250ms ease-in-out;
     content: "";
     position: absolute;
     top: -50%;
@@ -147,8 +147,8 @@ b{
     width: 0%;
     height:200%;
     z-index: 1;
-    background-color: red;
     border-radius: 50%;
+    background-color: red;
 
   }
   &:hover::before{

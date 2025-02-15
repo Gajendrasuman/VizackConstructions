@@ -159,4 +159,71 @@ modern solutions.
 `,
             },
         },
+        {
+            imageSrc: "https://img.freepik.com/free-vector/building-permit-abstract-concept-illustration-official-approval-contractor-service-property-remodeling-project-house-blueprint-application-form-real-estate-business_335657-3330.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+            title: "Maintenance Contract",
+            description:
+                `We offer comprehensive maintenance contracts tailored to your specific needs, ensuring your property remains in optimal condition. Our plans include regular inspections, preventative maintenance, and prompt repairs to minimize disruptions and maximize the lifespan of your investment.  We provide flexible options to suit various budgets and property types, offering peace of mind and protecting your valuable asset.
+`,
+            features: {
+                },
+        },
     ];
+
+
+
+export const homeServices: {
+    imageSrc: string;
+    title: string;
+    description: string;
+}[] = [
+        {
+            imageSrc: "https://img.freepik.com/free-vector/construction-architect-concept-illustration_114360-9008.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            title: "Planning and Design",
+        description: `Our expert team provides innovative planning and design solutions, ensuring your space is both functional and visually appealing. From concept to blueprint, we craft designs that suit your lifestyle and needs.`,
+        },
+        {
+            imageSrc: "https://img.freepik.com/free-vector/concept-handyman-worker_98292-1125.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            title: "Construction Services",
+            description: `We handle every aspect of construction, from groundwork to finishing touches. With a focus on quality materials and skilled craftsmanship, we ensure durable, safe, and aesthetically pleasing structures.`,
+        },
+        {
+            imageSrc: "https://img.freepik.com/free-vector/create-concept-illustration_114360-355.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            title: "Structural Work",
+            description: `Strong foundations are the key to a stable building. We specialize in structural frameworks, reinforcements, and load-bearing solutions to ensure safety, durability, and long-term resilience.`,
+           
+        },
+        {
+            imageSrc: "https://img.freepik.com/free-vector/interior-design-concept-illustration_114360-5406.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            title: "Interior Solutions",
+            description: `Bring your space to life with modern and elegant interior solutions. From layout optimization to furniture placement and décor, we create comfortable, stylish, and functional environments tailored to your taste.`,
+          
+        },
+        {
+            imageSrc: "https://img.freepik.com/premium-vector/hand-holding-mobile-phone-controls-smart-home_98292-4326.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            title: "Exterior Solutions",
+            description: `Enhance the beauty and functionality of your property’s exterior with expert landscaping, façade upgrades, and outdoor enhancements, adding both curb appeal and long-term value to your home or business.`,
+          
+        },
+        {
+            imageSrc: "https://img.freepik.com/premium-vector/hand-drawn-fire-prevention-concept_23-2149132744.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            title: "Utilities & Installations",
+            description:
+                `Ensure seamless operation of essential services with expert installation of plumbing, electrical systems, HVAC, and smart home technologies, making your space safe, efficient, and future-ready.`,
+        
+        },
+        {
+            imageSrc: "https://img.freepik.com/free-vector/build-your-home-concept-illustration_114360-5633.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            title: "Renovation & Remodeling",
+            description:
+                `Whether you're updating a single room or transforming your entire property, our renovation and remodeling services help modernize, expand, and improve your space to meet your evolving needs.`,
+          
+        },
+        {
+            imageSrc: "https://img.freepik.com/free-vector/building-permit-abstract-concept-illustration-official-approval-contractor-service-property-remodeling-project-house-blueprint-application-form-real-estate-business_335657-3330.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+            title: "Maintenance Contract",
+            description:
+                `Keep your property in top condition with our comprehensive maintenance services, including routine inspections, repairs, and preventive care to ensure longevity and hassle-free upkeep.`,
+        },
+    ];
+

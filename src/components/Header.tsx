@@ -40,11 +40,12 @@ export default function Header() {
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center">
             <Image
-              src={"/logo/t_logo.png"}
+              src={"/logo/logo.png"}
               width={50}
               height={50}
               alt="logo"
               loader={imgLoader}
+              className="rounded-full object-cover w-12 h-12 mix-blend-darken"
             />
             <span className="text-lg text-black">ViZack Enterprises</span>
           </Link>

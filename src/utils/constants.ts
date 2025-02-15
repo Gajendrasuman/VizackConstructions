@@ -29,8 +29,8 @@ export const footetNavigation = {
     ],
     company: [
         { name: "About Us", href: "/about" },
-        { name: "Our Process", href: "/about#process" },
-        { name: "Sustainability", href: "/about#sustainability" },
+        // { name: "Our Process", href: "/about#process" },
+        // { name: "Sustainability", href: "/about#sustainability" },
         { name: "Contact Us", href: "/contact" },
         { name: "Intern With Us", href: "https://forms.gle/au6P4oBjpR6Zswq17", download: true },
         { name: "Career Options", href: "https://forms.gle/rvW3tUsGgnY56HTY8", download: true },

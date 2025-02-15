@@ -58,7 +58,7 @@ export default function About() {
                 design, and sustainable solutions makes us the ideal choice for
                 those who seek excellence.
               </p>
-              <p>
+              <p className="text-lg italic">
                 This vision and philosophy are deeply inspired by and blessed by{" "}
                 <b>Shri Rajesh Jain Ji</b>,{" "}
                 <b>Director of Sakshi Construction</b>. As his family, we are

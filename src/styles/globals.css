@@ -127,7 +127,6 @@
     z-index: 2;
     top: 50%;
     right: 30%;
-
   }
   &:after{
     left: 30%;
@@ -137,4 +136,22 @@
 
 b{
   color: red;
+}
+.hoverButton{
+  &:before{
+    transition: all 800ms ease-in-out;
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -10%;
+    width: 0%;
+    height:200%;
+    z-index: 1;
+    background-color: red;
+    border-radius: 50%;
+
+  }
+  &:hover::before{
+    width: 120%;
+  }
 }

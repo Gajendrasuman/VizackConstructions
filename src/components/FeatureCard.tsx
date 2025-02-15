@@ -1,15 +1,17 @@
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { imgLoader } from "@/utils/constants";
+import { cn } from "@/lib/utils";
 
 interface FeatureCardProps {
   features: Record<string, string>;
   image: string;
+  className?: string;
 }
 
-export default function FeatureCard({ features, image }: FeatureCardProps) {
+export default function FeatureCard({ features, image, className }: FeatureCardProps) {
   return (
-    <Card className="bg-gradient-to-tl from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 rounded-2xl ">
+    <Card className={cn("bg-gradient-to-tl from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 rounded-2xl ", className)}>
       <CardHeader className="flex flex-col items-center">
         <Image
           src={image}

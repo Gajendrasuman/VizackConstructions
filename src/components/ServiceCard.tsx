@@ -4,17 +4,21 @@ import HoverButton from "./HoverButton"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import { imgLoader } from "@/utils/constants"
+import { cn } from "@/lib/utils"
 
 interface ServiceCardProps {
-    imageSrc: string
-    title: string
-    description: string
-    button?: boolean
+    imageSrc: string;
+    title: string;
+    description: string;
+    button?: boolean;
+    className?: string;
 }
 
-export default function ServiceCard({ imageSrc, title, description, button = true }: ServiceCardProps) {
+export default function ServiceCard({ imageSrc, title, description, button = true, className }: ServiceCardProps) {
     return (
-        <Card className="bg-gradient-to-tr from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 rounded-lg p-6 flex flex-col items-center text-center h-full">
+        <Card className={cn(" bg-gradient-to-tr from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 rounded-lg p-6 flex flex-col items-center text-center h-full",
+            className
+        )}>
             <CardHeader>
                 <div className="flex justify-center w-full">
                     <div className="relative  mb-4"> {/* Increased size */}

@@ -90,7 +90,7 @@ export default function Home() {
             </h1>
             <p className="text-xl text-quicksand text-black max-w-3xl mx-auto mb-8">
               We are a full-service construction company dedicated to
-              transforming your vision into reality.Whether you need a small
+              transforming your vision into reality. Whether you need a small
               renovation, a large-scale commercial project, or anything in
               between, we provide end-to-end solutions for all your construction
               needs, including both interior and exterior services.
@@ -126,7 +126,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+           */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Link
                 key={index}
@@ -134,7 +136,7 @@ export default function Home() {
                 target="_blank"
                 passHref
               >
-                <div className="cursor-pointer">
+                <div className="cursor-pointer h-[49rem] ">
                   <ServiceCard
                     key={index}
                     imageSrc={service.imageSrc}
@@ -206,12 +208,8 @@ export default function Home() {
               build something extraordinary together!
             </p>
             <Button asChild size="lg" variant="outline">
-              {/* <Link href="/contact"
-              className="mr-auto rounded-lg border border-gray-500 bg-transparent px-4 py-2 text-gray-500 shadow transition-all 
-                 hover:border-transparent hover:bg-gray-500 hover:text-white hover:shadow-lg">
-        Get in Touch
-            </Link> */}
               <HoverButton
+                
                 text="Get in Touch"
                 href="/contact#contact"
               ></HoverButton>

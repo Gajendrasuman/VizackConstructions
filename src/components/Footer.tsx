@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link"
 import { imgLoader } from "@/utils/constants"
 import Image from "next/image"

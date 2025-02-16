@@ -3,6 +3,7 @@ import Link from "next/link";
 import HoverButton from "../components/HoverButton";
 import { Typewriter } from "react-simple-typewriter";
 import { Button } from "@/components/ui/button";
+import {AwesomeButton} from 'react-awesome-button'
 import {
   Card,
   CardContent,
@@ -198,25 +199,35 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="mx-auto max-w-3xl py-24 bg-orange-500 text-secondary-foreground rounded-lg">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl bg-white p-4 rounded-lg shadow max-w-lg mx-auto font-bold mb-4">
-              Ready to Start Your Project?
-            </h2>
-            <p className="mb-8">
-              Contact us today for a consultation or to request a quote. Let's
-              build something extraordinary together!
-            </p>
-            <Button asChild size="lg" variant="outline" className="bg-white">
-              <HoverButton
-                text="Get in Touch"
-                href="/contact#contact"
-              ></HoverButton>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <section className="relative mx-auto max-w-4xl py-24 px-6 bg-orange-500 text-white rounded-3xl  overflow-hidden">
+  {/* Background Accent */}
+  <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.3),_transparent)]"></div>
+
+  <div className="relative z-10 text-center max-w-3xl mx-auto bg-white/20 backdrop-blur-md rounded-xl p-10 shadow-lg border border-white/10">
+    <h2 className="text-4xl font-bold text-white drop-shadow-md">
+      Ready to Start Your Project?
+    </h2>
+    <p className="mt-4 text-lg text-gray-100">
+      Contact us today for a consultation or to request a quote. Let’s build
+      something extraordinary together!
+    </p>
+
+    {/* Call to Action Button */}
+    <div className="mt-8">
+      <Button
+        asChild
+        size="lg"
+        href="/contact#contact"
+        variant="outline"
+        className="bg-white text-black font-semibold px-6 py-3 rounded-lg transition duration-300 hover:bg-black hover:text-white shadow-md hover:shadow-lg"
+      >
+        <AwesomeButton type="primary" >Get in Touch</AwesomeButton>
+      </Button>
+    </div>
+  </div>
+</section>
+
+
     </div>
   );
 }

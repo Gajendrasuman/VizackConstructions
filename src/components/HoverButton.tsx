@@ -20,7 +20,7 @@ const HoverButton = ({ text, href, className, }: HoverButtonProps) => {
       )}
     >
       {/* Background effect */}
-      <div className="absolute inset-0 w-full scale-x-0 origin-left bg-orange-400 transition-transform duration-300 ease-out group-hover:scale-x-100"></div>
+      <div className="absolute inset-0 w-full scale-x-0 origin-left bg-orange-500 transition-transform duration-300 ease-out group-hover:scale-x-100"></div>
 
       {/* Text */}
       <span className="relative z-10 font-bold text-sm text-black transition-all duration-300 group-hover:text-white">

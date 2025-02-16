@@ -28,7 +28,7 @@ export default function ServiceCard({ imageSrc, title, description, button = tru
                 <CardTitle className="text-xl font-semibold text-orange-500">{title}</CardTitle>
             </CardHeader>
             <CardContent className="flex-grow">
-                <CardDescription className="text-gray-700">{description}</CardDescription>
+                <CardDescription className="text-gray-700 sm:text-base">{description}</CardDescription>
             </CardContent>
             {button && (
                 <Button asChild size="lg" className="auto-hover hover:bg-secondary hover:text-secondary-foreground bg-white text-white transition-colors">

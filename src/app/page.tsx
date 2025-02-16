@@ -80,9 +80,10 @@ export default function Home() {
               Your{" "}
               <span className="text-orange-600 ">
 
-                  One Stop
+                One Stop
+                
               </span>
-              For All of Your Architectural Needs.
+              &nbsp;For All of Your Architectural Needs.
             </h1>
             <p className="text-xl text-quicksand text-black max-w-3xl mx-auto mb-8">
               We are a full-service construction company dedicated to
@@ -116,7 +117,7 @@ export default function Home() {
                 Our Services
               </RoughNotation>
             </h2>
-            <p className="text-black">
+            <p className="text-black pt-4">
               Comprehensive construction and property solutions tailored to your
               needs
             </p>
@@ -159,7 +160,7 @@ export default function Home() {
                 Why Choose Us
                 </RoughNotation>
             </h2>
-            <p className="text-black font-semibold">
+            <p className="text-black font-semibold pt-4">
               We deliver excellence through our core values and commitment to
               quality
             </p>

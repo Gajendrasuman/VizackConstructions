@@ -214,15 +214,13 @@ export default function Home() {
 
     {/* Call to Action Button */}
     <div className="mt-8">
-      <Button
-        asChild
-        size="lg"
+      <Link
+
         href="/contact#contact"
-        variant="outline"
         className="bg-white text-black font-semibold px-6 py-3 rounded-lg transition duration-300 hover:bg-black hover:text-white shadow-md hover:shadow-lg"
       >
-        <AwesomeButton type="primary" >Get in Touch</AwesomeButton>
-      </Button>
+        <AwesomeButton type="secondary" >Get in Touch</AwesomeButton>
+      </Link>
     </div>
   </div>
 </section>

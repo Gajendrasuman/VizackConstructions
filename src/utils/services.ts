@@ -180,12 +180,12 @@ export const homeServices: {
         {
             imageSrc: "https://img.freepik.com/free-vector/construction-architect-concept-illustration_114360-9008.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
             title: "Planning and Design",
-        description: `Our expert team provides innovative planning and design solutions, ensuring your space is both functional and visually appealing. From concept to blueprint, we craft designs that suit your lifestyle and needs.`,
+        description: `We bring you innovative planning and design solutions, ensuring your space is both functional and visually appealing. From concept to blueprint, we craft designs that suit your lifestyle and needs.`,
         },
         {
             imageSrc: "https://img.freepik.com/free-vector/concept-handyman-worker_98292-1125.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
             title: "Construction Services",
-            description: `We handle every aspect of construction, from groundwork to finishing touches. With a focus on quality materials and skilled craftsmanship, we ensure durable, safe, and aesthetically pleasing structures.`,
+            description: `From groundwork to finishing touches, We focus on quality materials and skilled craftsmanship, we ensure durable, safe, and aesthetically pleasing structures.`,
         },
         {
             imageSrc: "https://img.freepik.com/free-vector/create-concept-illustration_114360-355.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
@@ -223,7 +223,7 @@ export const homeServices: {
             imageSrc: "https://img.freepik.com/free-vector/building-permit-abstract-concept-illustration-official-approval-contractor-service-property-remodeling-project-house-blueprint-application-form-real-estate-business_335657-3330.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
             title: "Maintenance Contract",
             description:
-                `Keep your property in top condition with our comprehensive maintenance services, including routine inspections, repairs, and preventive care to ensure longevity and hassle-free upkeep.`,
+                `Keep your property in top condition with our comprehensive maintenance services, including routine inspections, repairs etc to ensure longevity and hassle-free upkeep.`,
         },
     ];
 

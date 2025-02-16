@@ -208,7 +208,7 @@ export default function Home() {
               Contact us today for a consultation or to request a quote. Let's
               build something extraordinary together!
             </p>
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg" variant="outline" className="bg-white">
               <HoverButton
                 text="Get in Touch"
                 href="/contact#contact"

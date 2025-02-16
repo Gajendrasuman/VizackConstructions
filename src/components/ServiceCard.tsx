@@ -31,7 +31,7 @@ export default function ServiceCard({ imageSrc, title, description, button = tru
                 <CardDescription className="text-gray-700">{description}</CardDescription>
             </CardContent>
             {button && (
-                <Button asChild size="lg" className="hover:bg-secondary hover:text-secondary-foreground bg-muted-foreground text-white transition-colors">
+                <Button asChild size="lg" className="hover:bg-secondary hover:text-secondary-foreground bg-white text-white transition-colors">
                     <HoverButton text="Know More" href="/services"></HoverButton>
                 </Button>
             )}

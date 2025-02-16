@@ -148,7 +148,7 @@ b{
     height:200%;
     z-index: 1;
     border-radius: 50%;
-    background-color: red;
+    background-color:#f97316;
 
   }
   &:hover::before{

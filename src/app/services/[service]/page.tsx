@@ -9,6 +9,7 @@ import Image from 'next/image'
 import { imgLoader } from '@/utils/constants'
 import HoverButton from '@/components/HoverButton'
 import { Button } from '@/components/ui/button'
+import { AwesomeButton } from 'react-awesome-button'
 
 const kanit = Kanit({
     weight: ["400", "700"],
@@ -82,9 +83,9 @@ export default function Service() {
         <Button 
             asChild 
             size="lg" 
-            className="px-6 py-3 rounded-lg border-white font-semibold text-lg text-orange-500 bg-white hover:bg-yellow hover:text-white transition-all duration-300"
+            className="px-6 py-3 rounded-lg border-white font-semibold text-lg text-black bg-white hover:bg-black hover:text-white transition-all duration-300"
         >
-            <HoverButton text="Inquire Now" />
+            <AwesomeButton>Inquire Now</AwesomeButton>
         </Button>
     </Link>
 </div>

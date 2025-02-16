@@ -72,7 +72,7 @@ export function Benefits() {
   return (
     <div className="">
       {benefits.map((benefit, index) => (
-        <Card key={index} className="bg-gradient-to-bl border border-[#d3d3d3]  from-[#e4e3e1] hover:from-white hover:to-white to-white text-muted">
+        <Card key={index} className="bg-gradient-to-bl border border-[#d3d3d3] m-4 from-[#e4e3e1] hover:from-white hover:to-white to-white text-muted">
           <CardHeader>
             <CardTitle>{benefit.title}</CardTitle>
           </CardHeader>

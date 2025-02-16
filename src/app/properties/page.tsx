@@ -38,22 +38,32 @@ export default function Properties() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 md:w-fit md:px-24 md:mx-auto bg-orange-500 text-orange-500-foreground">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Find Your Perfect Property?</h2>
-            <p className="mb-8">Browse our listings or get in touch with our property experts today</p>
-            <Button
-              asChild
-              size="lg"
-              variant="secondary"
-              className="bg-white shadow-lg text-orange-500 hover:bg-orange-500-foreground/90"
-            >
-              <Link href="/contact">Contact Our Experts</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <section className="relative py-24 px-6 md:w-fit md:px-24 md:mx-auto bg-orange-500 text-white rounded-3xl shadow-xl overflow-hidden">
+  {/* Decorative Background Gradient */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.2),_transparent)] opacity-20"></div>
+
+  <div className="container mx-auto px-6">
+    <div className="max-w-3xl mx-auto text-center bg-white/20 backdrop-blur-md rounded-xl p-10 shadow-lg border border-white/10">
+      <h2 className="text-4xl font-bold mb-4 drop-shadow-lg">
+        Ready to Find Your Perfect Property?
+      </h2>
+      <p className="mb-6 text-lg text-gray-100">
+        Browse our listings or get in touch with our property experts today.
+      </p>
+
+      {/* Call to Action Button */}
+      <Button
+        asChild
+        size="lg"
+        variant="outline"
+        className="bg-white text-black font-semibold px-6 py-3 rounded-lg transition duration-300 hover:bg-black hover:text-white shadow-md hover:shadow-lg"
+      >
+        <Link href="/contact">Contact Our Experts</Link>
+      </Button>
+    </div>
+  </div>
+</section>
+
     </div>
   )
 }

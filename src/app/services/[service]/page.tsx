@@ -75,7 +75,7 @@ export default function Service() {
     </h2>
     
     <Link 
-        href={`https://wa.me/917771877137?text=${encodeURIComponent("I want to know more about *" + serv.title + "* service.")}`} 
+        href={`https://wa.me/917771877195?text=${encodeURIComponent("I want to know more about *" + serv.title + "* service.")}`} 
         target="_blank" 
         rel="noopener noreferrer" 
         passHref

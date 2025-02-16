@@ -16,7 +16,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ imageSrc, title, description, button = true, className }: ServiceCardProps) {
     return (
-        <Card className={cn(" bg-gradient-to-tr from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 rounded-lg p-6 flex flex-col items-center text-center h-full",
+        <Card className={cn("auto-hover bg-gradient-to-tr from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 rounded-lg p-6 flex flex-col items-center text-center h-full",
             className
         )}>
             <CardHeader>
@@ -31,7 +31,7 @@ export default function ServiceCard({ imageSrc, title, description, button = tru
                 <CardDescription className="text-gray-700">{description}</CardDescription>
             </CardContent>
             {button && (
-                <Button asChild size="lg" className="hover:bg-secondary hover:text-secondary-foreground bg-white text-white transition-colors">
+                <Button asChild size="lg" className="auto-hover hover:bg-secondary hover:text-secondary-foreground bg-white text-white transition-colors">
                     <HoverButton text="Know More" href="/services"></HoverButton>
                 </Button>
             )}

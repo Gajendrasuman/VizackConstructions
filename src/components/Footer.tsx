@@ -36,8 +36,8 @@ export default function Footer() {
               <div key={index}>
                 <h3 className="font-semibold mb-4 capitalize">{key}</h3>
                 <ul className="space-y-2">
-                  {footerNavigation[key as keyof typeof footerNavigation].map((item) => (
-                    <li key={index}>
+                  {footerNavigation[key as keyof typeof footerNavigation].map((item, i) => (
+                    <li key={i}>
                       <Link href={item.href} className="text-muted-foreground hover:text-secondary transition-colors">
                         {item.name}
 

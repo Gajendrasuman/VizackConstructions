@@ -1,9 +1,8 @@
 "use client";
 import Link from "next/link";
-import HoverButton from "../components/HoverButton";
 import { Typewriter } from "react-simple-typewriter";
-import { Button } from "@/components/ui/button";
-import {AwesomeButton} from 'react-awesome-button'
+import { AwesomeButton } from 'react-awesome-button'
+// import useHover from "@/hooks/useHover";
 import {
   Card,
   CardContent,
@@ -25,6 +24,8 @@ const kanit = Teko({
 });
 
 export default function Home() {
+  // useHover();
+  
   return (
     <div>
       {/* Hero Section */}
@@ -106,7 +107,7 @@ export default function Home() {
       <section className="py-2 bg-[#EBE7E1]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className={"text-3xl text-orange-500 mb-4 font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 before:right-[28%] after:left-[28%]"}>
+            <h2 className={"text-3xl text-orange-500 mb-4 font-serif lines"}>
               <RoughNotation
                 type="underline"
                 animationDuration={300}
@@ -132,14 +133,11 @@ export default function Home() {
                 target="_blank"
                 passHref
               >
-                <div className="cursor-pointer h-[32rem] ">
                   <ServiceCard
-                    key={index}
                     imageSrc={service.imageSrc}
                     title={service.title}
                     description={service.description}
                   />
-                </div>
               </Link>
             ))}
           </div>
@@ -152,7 +150,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2
               className={
-                "text-3xl font-bold mb-4 text-orange-500 font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 before:right-[25%] after:left-[25%]"
+                "text-3xl font-bold mb-4 text-orange-500 font-serif lines "
               }
               >   <RoughNotation
               type = "underline"
@@ -170,7 +168,7 @@ export default function Home() {
             {whyChooseUs.map((value, index) => (
               <Card
                 key={index}
-                className="flex flex-col items-center justify-between p-6 bg-gradient-to-tr from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg rounded-2xl transition-transform md:hover:scale-105"
+                className="auto-hover flex flex-col items-center justify-between p-6 bg-gradient-to-tr from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg rounded-2xl transition-transform md:hover:scale-105"
               >
                 <CardHeader className="flex flex-col items-center">
                   <Image
@@ -215,7 +213,7 @@ export default function Home() {
       <Link
 
         href="/contact#contact"
-        className="bg-white text-black font-semibold px-6 py-3 rounded-lg transition duration-300 hover:bg-black hover:text-white shadow-md hover:shadow-lg"
+        className="auto-hover bg-white text-black font-semibold px-6 py-3 rounded-lg transition duration-300 hover:bg-black  hover:text-white shadow-md hover:shadow-lg"
       >
         <AwesomeButton type="secondary" >Get in Touch</AwesomeButton>
       </Link>

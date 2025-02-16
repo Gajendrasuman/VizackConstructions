@@ -22,7 +22,7 @@ export default function About() {
           <div className="max-w-3xl mx-auto">
             <h2
               className={
-                "text-3xl font-bold mb-4 text-orange-500 text-center font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 before:right-[31%] after:left-[31%] "
+                "text-3xl font-bold mb-4 text-orange-500 text-center font-serif lines"
               }
             >
               Our Story
@@ -81,7 +81,7 @@ export default function About() {
           <div className="max-w-3xl mx-auto text-center mb-16 ">
             <h2
               className={
-                "text-3xl font-bold mb-4 text-orange-500 font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900  before:right-[29.5%] after:left-[29.5%]"
+                "text-3xl font-bold mb-4 text-orange-500 font-serif lines"
               }
             >
               Our Values
@@ -119,7 +119,7 @@ export default function About() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2
               className={
-                "text-3xl font-bold mb-4 text-orange-500 font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 before:right-[28.5%] after:left-[28.5%]"
+                "text-3xl font-bold mb-4 text-orange-500 font-serif lines"
               }
             >
               Our Process

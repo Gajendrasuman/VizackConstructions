@@ -118,7 +118,10 @@
 
 .lines{
   position: relative;
+  width: fit-content;
+  margin: auto;
   &:before, &:after{
+    @apply shadow-md shadow-gray-900;
     content: "";
     width: 4rem;
     height: 0.2rem;
@@ -126,10 +129,10 @@
     background: black;
     z-index: 2;
     top: 50%;
-    right: 30%;
+    right: 105%;
   }
   &:after{
-    left: 30%;
+    left: 105%;
   }
 }
 

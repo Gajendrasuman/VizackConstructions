@@ -21,18 +21,24 @@ export default function Services() {
 
         <div className="py-24">
           <div className="container mx-auto px-4 py-8">
-            <div className="grid gap-24">
+            <div className="grid gap-x-8 gap-y-16 items-start">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="grid md:grid-cols-2 gap-8 items-start"
+                  className="grid md:grid-cols-2 md:grid-rows-1 gap-8 items-stretxh"
                 >
-                  <Link href={"/services/" + service.title.toLowerCase()} target="_blank" passHref>
-                    <ServiceCard className="h-[40rem]" {...service} />
-                  </Link>
-                  <Link href={"/services/" + service.title.toLowerCase()} target="_blank" passHref>
-                    <FeatureCard className="h-[40rem]" features={service.features} image={service.imageSrc}></FeatureCard>
-                  </Link>
+                  {index !== services.length - 1 && (
+                    <>
+                    <Link href={"/services/" + service.title.toLowerCase()} target="_blank" passHref>
+                      <ServiceCard {...service} />
+                    </Link>
+                    <Link href={"/services/" + service.title.toLowerCase()} target="_blank" passHref>
+                      <FeatureCard features={service.features} image={service.imageSrc}></FeatureCard>
+                    </Link>
+                    </>
+
+                  )}
+                
                 </div>
               ))}
             </div>

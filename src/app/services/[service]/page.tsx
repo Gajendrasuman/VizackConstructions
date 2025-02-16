@@ -61,7 +61,7 @@ export default function Service() {
                                         </div>
                                     </div>
 
-                                    <div className="flex justify-center max-w-2xl rounded-2xl mx-auto my-16 py-16 bg-orange-400">
+                                    <div className="flex justify-center md:max-w-2xl md:rounded-2xl mx-auto my-16 py-16 bg-orange-400">
                                         <Link href={`https://wa.me/917771877137?text=${encodeURIComponent("I want to know more about *" + serv.title + "* service.")}`} target='_blank' rel='noopener noreferrer' passHref>
                                             <Button asChild size="lg" className="auto-hover hover:bg-secondary hover:text-secondary-foreground bg-white text-white transition-colors">
                                                 <HoverButton text="Inquire Now" ></HoverButton>

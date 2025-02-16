@@ -71,7 +71,7 @@ export default function Service() {
                                     </div> */}
                                     <div className="flex flex-col items-center text-center mx-auto my-16 p-10 max-w-2xl md:rounded-2xl bg-orange-500 shadow-lg">
     <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-        Get More Information About Our {serv.title} Service
+        Get More Information About {serv.title} 
     </h2>
     
     <Link 

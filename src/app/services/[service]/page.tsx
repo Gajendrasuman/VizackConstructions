@@ -7,6 +7,8 @@ import { ChevronRight } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import Image from 'next/image'
 import { imgLoader } from '@/utils/constants'
+import HoverButton from '@/components/HoverButton'
+import { Button } from '@/components/ui/button'
 
 const kanit = Kanit({
     weight: ["400", "700"],
@@ -37,14 +39,14 @@ export default function Service() {
                                     <p className='text-muted text-center w-[60%] mx-auto py-4'>{serv.description}</p>
                                 </header>
 
-                                <section>
+                                <section key={index * services.length}>
                                     <div className="mx-auto px-4">
                                         <div className="w-full flex flex-col items-center mx-auto text-center">
                                             <h2 className="text-3xl font-bold mb-4 text-orange-500">Features & Benefits</h2>
                                             <p className="text-muted">The principles that guide our work and relationships</p>
                                             <div className="w-[80%] justify-items-center py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                                                {Object.entries(services[index].features).map(([key, value], index) => (
-                                                    <Card key={index} className="text-center bg-gradient-to-tl from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 text-muted">
+                                                {Object.entries(services[index].features).map(([key, value], i) => (
+                                                    <Card key={i} className="text-center bg-gradient-to-tl from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 text-muted">
                                                         <CardHeader className='text-orange-500'>
                                                             <CardTitle>{key}</CardTitle>
                                                         </CardHeader>
@@ -57,6 +59,14 @@ export default function Service() {
 
 
                                         </div>
+                                    </div>
+
+                                    <div className="flex justify-center max-w-2xl rounded-2xl mx-auto my-16 py-16 bg-orange-400">
+                                        <Link href={`https://wa.me/917771877137?text=${encodeURIComponent("I want to know more about *" + serv.title + "* service.")}`} target='_blank' rel='noopener noreferrer' passHref>
+                                            <Button asChild size="lg" className="auto-hover hover:bg-secondary hover:text-secondary-foreground bg-white text-white transition-colors">
+                                                <HoverButton text="Inquire Now" ></HoverButton>
+                                            </Button>
+                                        </Link>
                                     </div>
                                 </section>
                             </>

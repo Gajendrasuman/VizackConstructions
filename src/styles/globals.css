@@ -39,16 +39,12 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border scroll-smooth;
   }
 
   body {
     @apply bg-background text-foreground;
   }
-}
-
-*{
-  scroll-behavior: smooth;
 }
 
 .txt {
@@ -133,6 +129,15 @@
   }
   &:after{
     left: 105%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .lines{
+    &:before,
+      &:after {
+      display: none;
+      }
   }
 }
 

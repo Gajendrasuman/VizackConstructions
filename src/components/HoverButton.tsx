@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 interface HoverButtonProps {
   text: string;
-  href: string;
+  href?: string;
   className?: string;
 }
 
@@ -13,7 +13,7 @@ const HoverButton = ({ text, href, className, }: HoverButtonProps) => {
 
   return (
     <button
-      onClick={() => router.push(href)}
+      onClick={() => href && router.push(href)}
       className={cn(
         "group relative h-12 w-48 overflow-hidden rounded bg-white text-lg shadow-xl transition-all duration-300",
         className

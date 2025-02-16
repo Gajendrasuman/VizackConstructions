@@ -61,13 +61,34 @@ export default function Service() {
                                         </div>
                                     </div>
 
-                                    <div className="flex justify-center md:max-w-2xl md:rounded-2xl mx-auto my-16 py-16 bg-orange-400">
+                                    {/* <div className="flex justify-center md:max-w-2xl md:rounded-2xl mx-auto my-16 py-16 bg-orange-400">
                                         <Link href={`https://wa.me/917771877137?text=${encodeURIComponent("I want to know more about *" + serv.title + "* service.")}`} target='_blank' rel='noopener noreferrer' passHref>
                                             <Button asChild size="lg" className="auto-hover hover:bg-secondary hover:text-secondary-foreground bg-white text-white transition-colors">
                                                 <HoverButton text="Inquire Now" ></HoverButton>
                                             </Button>
                                         </Link>
-                                    </div>
+                                    </div> */}
+                                    <div className="flex flex-col items-center text-center mx-auto my-16 p-10 max-w-2xl md:rounded-2xl bg-orange-500 shadow-lg">
+    <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+        Get More Information About Our {serv.title} Service
+    </h2>
+    
+    <Link 
+        href={`https://wa.me/917771877137?text=${encodeURIComponent("I want to know more about *" + serv.title + "* service.")}`} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        passHref
+    >
+        <Button 
+            asChild 
+            size="lg" 
+            className="px-6 py-3 rounded-lg border-white font-semibold text-lg text-orange-500 bg-white hover:bg-yellow hover:text-white transition-all duration-300"
+        >
+            <HoverButton text="Inquire Now" />
+        </Button>
+    </Link>
+</div>
+
                                 </section>
                             </>
                         )

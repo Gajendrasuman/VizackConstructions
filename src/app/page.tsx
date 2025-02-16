@@ -78,15 +78,9 @@ export default function Home() {
             >
               Your{" "}
               <span className="text-orange-600 ">
-                <RoughNotation
-                  show={true}
-                  animationDuration={300}
-                  type="underline"
-                >
-                  {" "}
-                  One Stop{" "}
-                </RoughNotation>
-              </span>{" "}
+
+                  One Stop
+              </span>
               For All of Your Architectural Needs.
             </h1>
             <p className="text-xl text-quicksand text-black max-w-3xl mx-auto mb-8">
@@ -160,8 +154,12 @@ export default function Home() {
               className={
                 "text-3xl font-bold mb-4 text-orange-500 font-serif lines after:shadow-md after:shadow-gray-900 before:shadow-md before:shadow-gray-900 before:right-[25%] after:left-[25%]"
               }
-            >
+              >   <RoughNotation
+              type = "underline"
+              animationDuration = {300}
+              show = {true}>
                 Why Choose Us
+                </RoughNotation>
             </h2>
             <p className="text-black font-semibold">
               We deliver excellence through our core values and commitment to

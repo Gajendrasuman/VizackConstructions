@@ -7,7 +7,6 @@ import { ChevronRight } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import Image from 'next/image'
 import { imgLoader } from '@/utils/constants'
-import HoverButton from '@/components/HoverButton'
 import { Button } from '@/components/ui/button'
 import { AwesomeButton } from 'react-awesome-button'
 
@@ -47,12 +46,20 @@ export default function Service() {
                                             <p className="text-muted">The principles that guide our work and relationships</p>
                                             <div className="md:w-[80%] justify-items-center py-16 grid grid-cols-1 grid-rows-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                                                 {Object.entries(services[index].features).map(([key, value], i) => (
-                                                    <Card key={i} className="text-center bg-gradient-to-tl from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 text-muted">
+                                                    <Card key={i} className="text-center flex flex-col items-center justify-evenly bg-gradient-to-tl from-[#e3e4e1] hover:from-white hover:to-white to-white shadow-lg md:hover:scale-105 transition-all shadow-black/25 text-muted">
+                                                        <Image
+                                                            src={value.image}
+                                                            width={10}
+                                                            height={10}
+                                                            alt={key}
+                                                            loader={imgLoader}
+                                                            className="object-contain w-1/2 mix-blend-darken "
+                                                        />
                                                         <CardHeader className='text-orange-500'>
                                                             <CardTitle>{key}</CardTitle>
                                                         </CardHeader>
                                                         <CardContent >
-                                                            <CardDescription className='text-muted'>{value}</CardDescription>
+                                                            <CardDescription className='text-muted'>{value.text}</CardDescription>
                                                         </CardContent>
                                                     </Card>
                                                 ))}

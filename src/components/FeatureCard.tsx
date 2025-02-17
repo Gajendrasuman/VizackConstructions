@@ -4,7 +4,7 @@ import { imgLoader } from "@/utils/constants";
 import { cn } from "@/lib/utils";
 
 interface FeatureCardProps {
-  features: Record<string, string>;
+  features: Record<string, Record<string, string>>;
   image: string;
   className?: string;
 }
@@ -33,7 +33,7 @@ export default function FeatureCard({ features, image, className }: FeatureCardP
               <span className="flex flex-col font-bold tracking-wider uppercase">
                 {key}
                 <span className="text-gray-500 font-normal tracking-normal lowercase first-letter:uppercase">
-                  {value}
+                  {value.text}
                 </span>
               </span>
             </li>

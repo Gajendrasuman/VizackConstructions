@@ -2,7 +2,7 @@ export const services: {
     imageSrc: string;
     title: string;
     description: string;
-    features: {[key: string]: string};
+    features: {[key: string]: {[key: string]: string}};
 }[] = [
         {
             imageSrc: "https://img.freepik.com/free-vector/construction-architect-concept-illustration_114360-9008.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
@@ -17,15 +17,23 @@ before execution, making informed design choices seamless.We focus on modern,
 commercial project or a residential dream home, we ensure meticulous planning for
 flawless execution.`,
             features: {
-                "Customized architectural designs": `We create personalized designs that reflect your style
+                "Customized architectural designs": {
+                    image: "https://img.freepik.com/free-vector/architecture-project-design_24877-49737.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `We create personalized designs that reflect your style
 and needs, blending form and function.
-`,
-                "Structural planning": `Every building starts with a strong structural plan to ensure safety and
-stability.`,
-                "Interior and exterior design concepts": `Our design solutions consider both indoor and outdoor
-spaces, ensuring a harmonious flow.`,
-                "3D rendering and visualization": `See your project come to life with high-quality renderings
-before execution, enabling informed decisions.`,
+`},
+                "Structural planning": {
+                    image: "https://img.freepik.com/premium-photo/no-humans-white-background_943869-137.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Every building starts with a strong structural plan to ensure safety and
+stability.`},
+                "Interior and exterior design concepts": {
+                    image: "https://img.freepik.com/premium-photo/modern-home-interior-design-with-open-floor-plan-orange-accents_1113571-12393.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Our design solutions consider both indoor and outdoor
+spaces, ensuring a harmonious flow.`},
+                "3D rendering and visualization": {
+                    image: "https://img.freepik.com/premium-photo/architect-working-digital-blueprint-hightech-flexible-workspace-with-glossy-surfaces-showcas_980716-510806.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `See your project come to life with high-quality renderings
+before execution, enabling informed decisions.`},
             },
         },
         {
@@ -40,15 +48,23 @@ Our expertise extends to commercial spaces, hospitality projects, and industrial
 ensuring seamless project execution with adherence to safety regulations and
 architectural excellence.`,
             features: {
-                "Residential & commercial buildings": `We construct homes and commercial spaces with
+                "Residential & commercial buildings": {
+                    image: "https://img.freepik.com/free-vector/many-office-buildings-city_1308-35976.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `We construct homes and commercial spaces with
 the utmost attention to quality and functionality.
-`,
-                "Hotels and restaurants": `Expertise in developing hospitality spaces that combine comfort
-with design.`,
-                "Office spaces and retail stores": `We craft functional and visually appealing spaces for retail and
-office environments.`,
-                "Industrial facilities": `Reliable, robust construction for industrial setups with a focus on
-efficiency.`,
+`},
+                "Hotels and restaurants": {
+                    image: "https://img.freepik.com/premium-vector/hotel-design-white-background-vector-illustration_24911-28360.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Expertise in developing hospitality spaces that combine comfort
+with design.`},
+                "Office spaces and retail stores": {
+                    image: "https://img.freepik.com/free-vector/store-buildings-brand-clothes-shop-supermarket-coffee-house-sushi-bar-facade-modern-city-architecture-exterior-market-place-front-view-isolated-white-background-cartoon-illustration_107791-3839.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `We craft functional and visually appealing spaces for retail and
+office environments.`},
+                "Industrial facilities": {
+                    image: "https://img.freepik.com/free-vector/factory-objects-design-concept-white-with-industrial-constructions-yellow-grey-buildings-machine-different-tools-concept_1284-49102.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid", 
+                    text: `Reliable, robust construction for industrial setups with a focus on
+efficiency.`},
             },
         },
         {
@@ -62,13 +78,22 @@ longevity, while our fabrication services bring customized metal and steel struc
 adding both strength and style to any construction. We ensure strict adherence to industry
 standards while focusing on innovation and quality craftsmanship. `,
             features: {
-                "Reinforced Cement Concrete (RCC) structures": `Strong and durable foundations and
-frameworks for all building types.`,
-                "Brickwork and masonry": `Precision masonry that adds both strength and beauty.
-`,
-                Plastering: `High-quality plastering for smooth and durable finishes.`,
-                "Fabrication work": `Custom metal and steel structures to enhance the design and safety of
-your project.`,
+                "Reinforced Cement Concrete (RCC) structures": {
+                    image: "https://img.freepik.com/premium-vector/set-steel-column-foundation-reinforced-concrete-block-eps-vector_320857-2076.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Strong and durable foundations and
+frameworks for all building types.`},
+                "Brickwork and masonry": {
+                    image: "https://img.freepik.com/free-vector/bricklayer-concept-illustration_114360-6329.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Precision masonry that adds both strength and beauty.
+`},
+                Plastering: {
+                    image: "https://img.freepik.com/premium-vector/isometric-plasterer-renovating-indoor-walls-ceilings-with-float-plaster-construction-finishing-works-construction-building-industry-new-home-construction-interior-vector-illustration_589019-2639.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `High-quality plastering for smooth and durable finishes.`
+            },
+                "Fabrication work": {
+                    image: "https://img.freepik.com/free-vector/woodworker-concept-illustration_114360-3105.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Custom metal and steel structures to enhance the design and safety of
+your project.`},
             },
         },
         {
@@ -82,15 +107,27 @@ contemporary aesthetics. Our custom cabinetry and furniture solutions bring uniq
 functionality, while our expert painting and wall treatments ensure flawless finishes that
 enhance the beauty of your interiors. `,
             features: {
-                "Flooring (tiles, hardwood, laminate)": `Choose from a variety of stylish and durable
+                "Flooring (tiles, hardwood, laminate)": {
+                    image: "https://img.freepik.com/free-vector/tiler-concept-illustration_114360-11898.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Choose from a variety of stylish and durable
 flooring options to suit your space.
-`,
-                "False ceilings": `Modern and elegant ceilings that enhance the interior’s appeal.`,
-                "Modular kitchens": `Designed for both style and functionality, perfect for modern living.`,
-                "Custom cabinetry and furniture": `Tailored storage and furniture solutions that maximize
-space.`,
-                "Painting and wall treatments": `Flawless finishes that complement your interiors and elevate
-their aesthetics.`,
+`},
+                "False ceilings": {
+                    image: "https://img.freepik.com/premium-photo/essential-steps-handyman-ceiling-leak-fixes-isolated-white-background_660230-91884.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Modern and elegant ceilings that enhance the interior’s appeal.`
+            },
+                "Modular kitchens": {
+                    image: "https://img.freepik.com/premium-vector/realistic-office-home-furniture-vector-illustration_1253202-255757.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Designed for both style and functionality, perfect for modern living.`
+            },
+                "Custom cabinetry and furniture": {
+                    image: "https://img.freepik.com/free-vector/desk-shelving-with-stack-books_25030-39055.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Tailored storage and furniture solutions that maximize
+space.`},
+                "Painting and wall treatments": {
+                    image: "https://img.freepik.com/free-vector/builders-painting-wall-banner_1262-21443.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Flawless finishes that complement your interiors and elevate
+their aesthetics.`},
             },
         },
         {
@@ -104,13 +141,23 @@ installation for driveways, walkways, and patios, while our fencing and gate sol
 provide security and elegance. We focus on creating exteriors that are both visually
 stunning and functionally efficient. `,
             features: {
-                "Landscaping and garden development": `Beautiful garden designs that enhance outdoor
+                "Landscaping and garden development": {
+                    image: "https://img.freepik.com/free-vector/gardening-concept-illustration_114360-1340.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Beautiful garden designs that enhance outdoor
 spaces and add tranquility.
-`,
-                "Exterior painting": `Protective and aesthetic painting solutions for your building’s exterior.`,
-                "Paver installation": `Durable and stylish pavers for walkways, patios, and driveways.`,
-                "Fencing and gates": `Elegant yet secure fencing and gate solutions to enhance your property’s
-appearance and safety.`,
+`},
+                "Exterior painting": {
+                    image: "https://img.freepik.com/free-vector/workers-with-paintbrush-wrench-improving-house-house-renovation-property-renovation-house-remodeling-onstruction-services-concept-bright-vibrant-violet-isolated-illustration_335657-1117.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Protective and aesthetic painting solutions for your building’s exterior.`
+            },
+                "Paver installation": {
+                    image: "https://img.freepik.com/premium-vector/professional-construction-worker-highvisibility-clothing-site_1310786-46176.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Durable and stylish pavers for walkways, patios, and driveways.`
+            },
+                "Fencing and gates": {
+                    image: "https://img.freepik.com/free-vector/road-elements-collection_1145-35.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Elegant yet secure fencing and gate solutions to enhance your property’s
+appearance and safety.`},
             },
         },
         {
@@ -125,15 +172,23 @@ elevate modern living by introducing automation, security, and energy-efficient 
 We prioritize durability, efficiency, and technological advancements in all utility
 installations. `,
             features: {
-                "Plumbing and sanitation": `Expert plumbing services to ensure effective water supply and
+                "Plumbing and sanitation": {
+                    image: "https://img.freepik.com/free-vector/plumbing-service-advertising-banner-repairman-uniform-standing-with-wrench-hand-tools-box-near-sink_575670-1705.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Expert plumbing services to ensure effective water supply and
 drainage systems.
-`,
-                "Electrical wiring and fixtures": `Safe and energy-efficient electrical solutions for your home or
-commercial space.`,
-                "HVAC systems": `Climate control systems to ensure comfort in any space.
-`,
-                "Smart home integrations": `Advanced automation and energy-efficient technologies for
-modern living.`,
+`},
+                "Electrical wiring and fixtures": {
+                    image: "https://img.freepik.com/free-vector/electrician-engineer-checking-up-voltage-current-resistance-with-multimeter-breaker-switch-box_575670-109.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Safe and energy-efficient electrical solutions for your home or
+commercial space.`},
+                "HVAC systems": {
+                    image: "https://img.freepik.com/free-vector/air-conditioning-repair-mounting-service-repairman-installing-examining-repairing-conditioner-with-special-tools-equipment-isolated-vector-illustration_613284-50.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Climate control systems to ensure comfort in any space.
+`},
+                "Smart home integrations": {
+                    image: "https://img.freepik.com/premium-vector/smart-home-mini-people-work-from-home-flat_9041-335.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Advanced automation and energy-efficient technologies for
+modern living.`},
             },
         },
         {
@@ -147,16 +202,24 @@ style and functionality needs. Our team specializes in restoring historical buil
 preserving their authenticity, ensuring that old-world charm meets modern functionality.
 We breathe new life into spaces while maintaining quality and durability. `,
             features: {
-                "Home extensions": `Expand your living space to meet your needs and lifestyle.
-`,
-                "Kitchen and bathroom makeovers": `Modernize and personalize your kitchen and bathroom
+                "Home extensions": {
+                    image: "https://img.freepik.com/free-vector/house-rehab-concept-illustration_114360-21178.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Expand your living space to meet your needs and lifestyle.
+`},
+                "Kitchen and bathroom makeovers": {
+                    image: "https://img.freepik.com/premium-vector/professional-plumber-team-trying-stop-house-flooding_179970-3233.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Modernize and personalize your kitchen and bathroom
 with functional designs.
-`,
-                "Office and commercial upgrades": `Revamp your office or commercial space for improved
-functionality and aesthetics.`,
-                "Historical building restoration": `Restore the charm of older buildings while integrating
+`},
+                "Office and commercial upgrades": {
+                    image: "https://img.freepik.com/premium-vector/distance-home-online-working-employee_88272-5129.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Revamp your office or commercial space for improved
+functionality and aesthetics.`},
+                "Historical building restoration": {
+                    image: "https://img.freepik.com/free-vector/illustration-mediterranean-city-building-exterior-water-color-style_53876-6808.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
+                    text: `Restore the charm of older buildings while integrating
 modern solutions.
-`,
+`},
             },
         },
         {

@@ -25,23 +25,26 @@ export default function Services() {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="grid md:grid-cols-2 md:grid-rows-1 gap-8 items-stretxh"
+                  className="grid md:grid-cols-2 md:grid-rows-1 gap-8 items-stretch justify-items-stretch"
                 >
                   {index !== services.length - 1 && (
                     <>
-                    <Link href={"/services/" + service.title.toLowerCase()} target="_blank" passHref>
-                      <ServiceCard {...service} />
-                    </Link>
-                    <Link href={"/services/" + service.title.toLowerCase()} target="_blank" passHref>
-                      <FeatureCard features={service.features} image={service.imageSrc}></FeatureCard>
-                    </Link>
+                      <Link href={"/services/" + service.title.toLowerCase()} target="_blank" passHref>
+                        <div className="h-full flex">
+                          <ServiceCard {...service} className="h-full flex flex-col" />
+                        </div>
+                      </Link>
+                      <Link href={"/services/" + service.title.toLowerCase()} target="_blank" passHref>
+                        <div className="h-full flex">
+                          <FeatureCard features={service.features} image={service.imageSrc} className="h-full flex flex-col" />
+                        </div>
+                      </Link>
                     </>
-
                   )}
-                
                 </div>
               ))}
             </div>
+
           </div>
         </div>
       </section>

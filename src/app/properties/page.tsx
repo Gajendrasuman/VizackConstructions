@@ -58,7 +58,7 @@ export default function Properties() {
         variant="outline"
         className="bg-white text-black font-semibold px-6 py-3 rounded-lg transition duration-300 hover:bg-black hover:text-white shadow-md hover:shadow-lg"
       >
-        <Link href="/contact">Contact Our Experts</Link>
+              <Link href="/contact/property-form">Contact Our Experts</Link>
       </Button>
     </div>
   </div>

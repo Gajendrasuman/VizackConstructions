@@ -56,7 +56,7 @@ export default function PropertyCard() {
                 asChild
                 className="w-full bg-orange-500 text-orange-500-foreground hover:bg-orange-500/90"
               >
-                <Link href="/contact">Enquire Now</Link>
+                <Link href="/contact/property-form">Enquire Now</Link>
               </Button>
             </CardContent>
           </Card>

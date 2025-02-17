@@ -10,7 +10,6 @@ import Link from "next/link"
 import { useState } from "react"
 import { toast, Toaster } from "react-hot-toast"
 
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     firstname: "",
@@ -109,9 +108,6 @@ export default function Contact() {
 
   return (
     <div>
-
-      
-
       <Hero id="contact" className="mt-1 " title="Contact Us" subtitle="Get in touch with our team for any inquiries" />
 
       <section className="py-10">
@@ -181,24 +177,24 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="firstName" >First name</Label>
-                      <Input id="firstName" name="firstname" onChange={handleChange} value={formData.firstname} placeholder="Enter your first name" />
+                      <Input id="firstName" required name="firstname" onChange={handleChange} value={formData.firstname} placeholder="Enter your first name" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="lastName">Last name</Label>
-                      <Input id="lastName" name="lastname" onChange={handleChange} value={formData.lastname} placeholder="Enter your last name" />
+                      <Input id="lastName" required name="lastname" onChange={handleChange} value={formData.lastname} placeholder="Enter your last name" />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input name="email" onChange={handleChange} value={formData.email} id="email" type="email" placeholder="Enter your email" />
+                    <Input name="email" required onChange={handleChange} value={formData.email} id="email" type="email" placeholder="Enter your email" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone</Label>
-                    <Input name="phonenumber" onChange={handleChange} value={formData.phonenumber} id="phone" type="tel" placeholder="Enter your phone number" />
+                    <Input name="phonenumber" required onChange={handleChange} value={formData.phonenumber} id="phone" type="tel" placeholder="Enter your phone number" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject</Label>
-                    <Input name="subject" onChange={handleChange} value={formData.subject} id="subject" placeholder="What is this regarding?" />
+                    <Input name="subject" required onChange={handleChange} value={formData.subject} id="subject" placeholder="What is this regarding?" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>

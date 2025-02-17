@@ -17,6 +17,7 @@ import { RoughNotation } from "react-rough-notation";
 import { imgLoader } from "@/utils/constants";
 import Image from "next/image";
 import { whyChooseUs } from "@/utils/why-choose-us";
+import FloatButton from "@/components/FloatButton";
 
 const kanit = Teko({
   weight: ["700"],
@@ -40,7 +41,7 @@ export default function Home() {
             >
               <p className="sm:block ">Welcome to</p>
               <span className="text-orange-600 mb-8 md:block">
-                ViZack Enterprises
+                ViZack Enterprises <span className="text-black">/</span> Constructions
               </span>
               <p className="text-zinc-500 md:block mt-4">Masters of {""}</p>
               <span>
@@ -219,7 +220,8 @@ export default function Home() {
         <AwesomeButton type="secondary" >Get in Touch</AwesomeButton>
       </Link>
     </div>
-  </div>
+        </div>
+        <FloatButton />
 </section>
 
 

@@ -5,7 +5,7 @@ export const services: {
     features: {[key: string]: {[key: string]: string}};
 }[] = [
         {
-            imageSrc: "https://img.freepik.com/free-vector/construction-architect-concept-illustration_114360-9008.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+        imageSrc: "https://img.freepik.com/premium-vector/activity-men-daily-life-office-workplace-cartoon-character-vector-illustration_1314480-37119.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
             title: "Planning and Design",
             description: `We provide end-to-end planning and design solutions tailored to your vision. Our team of
 experts works closely with clients to develop customized architectural designs that
@@ -37,7 +37,7 @@ before execution, enabling informed decisions.`},
             },
         },
         {
-            imageSrc: "https://img.freepik.com/free-vector/concept-handyman-worker_98292-1125.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            imageSrc: "https://img.freepik.com/free-vector/empty-banner-with-construction-objects-elements_1308-102767.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
             // imageSrc: "https://img.freepik.com/free-vector/construction-crane-concept-illustration_114360-9067.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
             title: "Construction Services",
             description: `From small residential projects to large-scale commercial developments, we deliver highquality construction services with a commitment to durability and efficiency. Our team is
@@ -68,7 +68,7 @@ efficiency.`},
             },
         },
         {
-            imageSrc: "https://img.freepik.com/free-vector/create-concept-illustration_114360-355.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            imageSrc: "https://img.freepik.com/premium-photo/3d-illustration-industrial-building_259146-1972.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
             title: "Structural Work",
             description: `A building’s strength lies in its foundation and framework. We specialize in reinforced
 cement concrete (RCC) structures, ensuring durability and safety in every project. Our
@@ -97,7 +97,7 @@ your project.`},
             },
         },
         {
-            imageSrc: "https://img.freepik.com/free-vector/interior-design-concept-illustration_114360-5406.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            imageSrc: "https://img.freepik.com/free-vector/chair-manufacture-interior-designer-carpentry-workshop-custom-furniture-best-bespoke-furniture-master-furniture-makers-concept_335657-709.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
             title: "Interior Solutions",
             description: `Interiors define the personality of a space, and we bring design expertise to every project.
 Our flooring solutions range from elegant hardwood and stylish tiles to durable laminates,
@@ -131,7 +131,7 @@ their aesthetics.`},
             },
         },
         {
-            imageSrc: "https://img.freepik.com/premium-vector/hand-holding-mobile-phone-controls-smart-home_98292-4326.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            imageSrc: "https://img.freepik.com/free-vector/building-repair-housetop-renovation-roof-reconstruction-roofing-services-roof-repair-support-peak-roofing-contractors-concept_335657-711.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
             title: "Exterior Solutions",
             description: `A property’s exterior is the first impression, and we make it count. Our landscaping services
 enhance outdoor spaces with lush greenery, artistic garden designs, and well-planned
@@ -161,7 +161,7 @@ appearance and safety.`},
             },
         },
         {
-            imageSrc: "https://img.freepik.com/premium-vector/hand-drawn-fire-prevention-concept_23-2149132744.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            imageSrc: "https://img.freepik.com/premium-vector/electricians-work-with-wiring-lighting-flat-vector-illustration-isolated_181313-2912.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
             title: "Utilities & Installations",
             description:
                 `A building is only as good as its utilities. We provide expert plumbing and sanitation
@@ -192,7 +192,7 @@ modern living.`},
             },
         },
         {
-            imageSrc: "https://img.freepik.com/free-vector/build-your-home-concept-illustration_114360-5633.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            imageSrc: "https://img.freepik.com/free-vector/man-worker-builder-repairman-character-engaged-house-repair-process-set-people-team-painting-wall-installing-mending-roof-wallpapering_575670-169.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
             title: "Renovation & Remodeling",
             description:
                 `Spaces evolve, and we help them transform with our renovation and remodeling expertise.
@@ -241,42 +241,42 @@ export const homeServices: {
     description: string;
 }[] = [
         {
-            imageSrc: "https://img.freepik.com/free-vector/construction-architect-concept-illustration_114360-9008.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+        imageSrc: "https://img.freepik.com/premium-vector/activity-men-daily-life-office-workplace-cartoon-character-vector-illustration_1314480-37119.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
             title: "Planning and Design",
         description: `We bring you innovative planning and design solutions, ensuring your space is both functional and visually appealing. From concept to blueprint, we craft designs that suit your lifestyle and needs.`,
         },
         {
-            imageSrc: "https://img.freepik.com/free-vector/concept-handyman-worker_98292-1125.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            imageSrc: "https://img.freepik.com/free-vector/empty-banner-with-construction-objects-elements_1308-102767.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
             title: "Construction Services",
             description: `From groundwork to finishing touches, We focus on quality materials and skilled craftsmanship, we ensure durable, safe, and aesthetically pleasing structures.`,
         },
         {
-            imageSrc: "https://img.freepik.com/free-vector/create-concept-illustration_114360-355.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            imageSrc: "https://img.freepik.com/premium-photo/3d-illustration-industrial-building_259146-1972.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
             title: "Structural Work",
             description: `Strong foundations are the key to a stable building. We specialize in structural frameworks, reinforcements, and load-bearing solutions to ensure safety, durability, and long-term resilience.`,
            
         },
         {
-            imageSrc: "https://img.freepik.com/free-vector/interior-design-concept-illustration_114360-5406.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            imageSrc: "https://img.freepik.com/free-vector/chair-manufacture-interior-designer-carpentry-workshop-custom-furniture-best-bespoke-furniture-master-furniture-makers-concept_335657-709.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
             title: "Interior Solutions",
             description: `Bring your space to life with modern and elegant interior solutions. From layout optimization to furniture placement and décor, we create comfortable, stylish, and functional environments tailored to your taste.`,
           
         },
         {
-            imageSrc: "https://img.freepik.com/premium-vector/hand-holding-mobile-phone-controls-smart-home_98292-4326.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            imageSrc: "https://img.freepik.com/free-vector/building-repair-housetop-renovation-roof-reconstruction-roofing-services-roof-repair-support-peak-roofing-contractors-concept_335657-711.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
             title: "Exterior Solutions",
             description: `Enhance the beauty and functionality of your property’s exterior with expert landscaping, façade upgrades, and outdoor enhancements, adding both curb appeal and long-term value to your home or business.`,
           
         },
         {
-            imageSrc: "https://img.freepik.com/premium-vector/hand-drawn-fire-prevention-concept_23-2149132744.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            imageSrc: "https://img.freepik.com/premium-vector/electricians-work-with-wiring-lighting-flat-vector-illustration-isolated_181313-2912.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
             title: "Utilities & Installations",
             description:
                 `Ensure seamless operation of essential services with expert installation of plumbing, electrical systems, HVAC, and smart home technologies, making your space safe, efficient, and future-ready.`,
         
         },
         {
-            imageSrc: "https://img.freepik.com/free-vector/build-your-home-concept-illustration_114360-5633.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_authors_boost",
+            imageSrc: "https://img.freepik.com/free-vector/man-worker-builder-repairman-character-engaged-house-repair-process-set-people-team-painting-wall-installing-mending-roof-wallpapering_575670-169.jpg?uid=R8363709&ga=GA1.1.1749654531.1739179931&semt=ais_hybrid",
             title: "Renovation & Remodeling",
             description:
                 `Whether you're updating a single room or transforming your entire property, our renovation and remodeling services help modernize, expand, and improve your space to meet your evolving needs.`,

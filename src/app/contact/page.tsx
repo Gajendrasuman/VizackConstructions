@@ -8,6 +8,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import { toast, Toaster } from "react-hot-toast"
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -29,25 +31,81 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    // e.preventDefault();
+  const handleSubmit = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("/api/send-email", {
+      const responsePromise = fetch("/api/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify(formData)
       });
-      const data = await response.json();
-      setSendSuccess(true);
-      setIsLoading(false);
+
+      await toast.promise(
+        responsePromise,
+        {
+          loading: "Sending email...",
+          success: "Email sent successfully!",
+          error: "Failed to send email.",
+        }
+      );
+
+
+
+      const response = await responsePromise;
+      if (!response.ok) {
+        throw new Error("Failed to send email");
+      }
+      else {
+        setFormData({
+          firstname: "",
+          lastname: "",
+          email: "",
+          phonenumber: "",
+          message: "",
+          subject: "",
+        });
+        const form = document.querySelector("form");
+        form?.reset();
+      }
+      
     } catch (error) {
-      console.error(error);
+      console.error("Error sending email:", error);
+    } finally {
+      setSendSuccess(true);
       setIsLoading(false);
     }
   };
+
+
+  // const handleSubmit = async () => {
+  //   // e.preventDefault();
+  //   setIsLoading(true);
+  //   try {
+  //     const response = await fetch("/api/send-email", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       },
+  //       body: JSON.stringify(formData)
+  //     });
+  //     toast.promise(
+  //       response,
+  //       {
+  //         loading: 'Saving...',
+  //         success: <b>Settings saved!</b>,
+  //         error: <b>Could not save.</b>,
+  //       }
+  //     );
+      
+  //     setSendSuccess(true);
+  //     setIsLoading(false);
+  //   } catch (error) {
+  //     console.error(error);
+  //     setIsLoading(false);
+  //   }
+  // };
 
   return (
     <div>
@@ -161,6 +219,10 @@ export default function Contact() {
             </Card>
           </div>
         </div>
+        <Toaster
+          position="bottom-right"
+          reverseOrder={true}
+        />
       </section>
 
       

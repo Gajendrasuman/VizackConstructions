@@ -11,7 +11,7 @@ export default function FloatButton() {
                     width={50}
                     height={50}
                     alt="logo"
-                    className="fixed bottom-10 right-10 hover:scale-110 rounded-full cursor-pointer"
+                    className="fixed z-[9999] bottom-10 right-10 hover:scale-110 rounded-full cursor-pointer"
                     loader={imgLoader}
                 />
             </Link>

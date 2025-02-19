@@ -18,6 +18,7 @@ import { imgLoader } from "@/utils/constants";
 import Image from "next/image";
 import { whyChooseUs } from "@/utils/why-choose-us";
 import FloatButton from "@/components/FloatButton";
+import Testimonials from "@/components/testomonial";
 
 const kanit = Teko({
   weight: ["700"],
@@ -196,6 +197,11 @@ export default function Home() {
         </div>
       </section>
 
+          {/* Testimonial */}
+      <section>
+
+          <Testimonials />
+      </section>
       {/* CTA Section */}
       <section className="relative mx-auto max-w-4xl py-24 px-6 bg-orange-500 text-white rounded-3xl  overflow-hidden">
   {/* Background Accent */}
@@ -209,6 +215,8 @@ export default function Home() {
       Contact us today for a consultation or to request a quote. Let’s build
       something extraordinary together!
     </p>
+
+
 
     {/* Call to Action Button */}
     <div className="mt-8">

@@ -9,23 +9,23 @@ const testimonials = [
     {
         quote:
             "The attention to detail and the user-centric approach of this team has significantly improved our product's usability. They're not just developers; they're problem solvers.",
-        author: "Alex Rodriguez",
-        title: "Head of Product",
-        company: "TechCorp Inc.",
+        author: "Vinay Pandey",
+        title: "Property Builder",
+        company: "Vk builders",
     },
     {
         quote:
             "Working with this team has been transformative for our business. Their innovative solutions and commitment to excellence have helped us stay ahead in a competitive market.",
-        author: "Sarah Chen",
+        author: "Samiksha singh",
         title: "CEO",
-        company: "InnovateTech",
+        company: "Durga Properties",
     },
     {
         quote:
             "The level of professionalism and technical expertise demonstrated by this team is unparalleled. They don't just meet expectations; they consistently exceed them.",
-        author: "Michael O'Brien",
-        title: "CTO",
-        company: "FutureSoft Systems",
+        author: "Akash Thapar",
+        title: "Client",
+        company: "Gwalior",
     },
 ]
 

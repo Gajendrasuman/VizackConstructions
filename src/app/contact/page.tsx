@@ -146,10 +146,12 @@ export default function Contact() {
                   <div className="flex items-start gap-4">
                     <MapPin className="w-5 h-5 text-secondary mt-1" />
                     <div>
-                      <p className="font-medium">Address</p><Link href ="https://maps.app.goo.gl/cVMF31yq7TikZq3z9?g_st=aw">
+                      <p className="font-medium">Address</p>
                       <p className="text-muted-foreground">
+                      <Link target="_blank" className="hover:text-secondary transition-colors" href ="https://maps.app.goo.gl/cVMF31yq7TikZq3z9?g_st=aw">
                         Sakshi Greens, Sachin Tendulkar Marg, Near DB City, Hurawali, City centre Gwalior
-                      </p></Link>
+                      </Link>
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
